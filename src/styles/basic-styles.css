@@ -1,7 +1,12 @@
 body {
-  background-color: #4081b6;
+  background-color: #80989D;
 }
 
 .text--white {
   color: #ffffff;
+}
+
+.page-container {
+  display: grid;
+  flex-direction: column;
 }/*# sourceMappingURL=basic-styles.css.map */

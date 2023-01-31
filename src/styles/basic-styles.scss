@@ -1,10 +1,16 @@
 $backgroundBlue: #4081b6;
 $mainText: #ffffff;
+$creamy-kelp--bg: #80989D;
 
 body {
-    background-color: $backgroundBlue;
+    background-color: $creamy-kelp--bg;
 }
 
 .text--white {
     color: $mainText;
+}
+
+.page-container {
+    display: grid;
+    grid-template-rows:
 }

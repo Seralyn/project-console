@@ -7,7 +7,7 @@ import HeaderBar from '../components/HeaderBar'
 
 const IndexPage = () => {
   return (
-    <main>
+    <main className="page-container">
       <div className='text--white'>Some white text for testing</div>
       <HeaderBar />
     </main>
