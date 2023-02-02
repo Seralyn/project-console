@@ -1,16 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+
 $backgroundBlue: #4081b6;
 $mainText: #ffffff;
 $creamy-kelp--bg: #80989D;
 
 body {
     background-color: $creamy-kelp--bg;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .text--white {
     color: $mainText;
 }
 
-.page-container {
-    display: grid;
-    grid-template-rows:
+
+
+.horizontal-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.clock-padding {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.component-border {
+    border: 1px white solid;
+    padding: 10px;
+    margin: 2rem 1rem 2rem 1rem;
+    border-radius: 15px;
+    background-color: #5D7D84;
+}@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+
+.horizontal-layout-child-padding {
+    padding: 20px;
+}
+
+.top-row-layout {
+    display: flex;
+    // flex-direction: row;
+    justify-content: space-around;
+}
+
+.social-icons-spacing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.side-container-top-margin {
+    margin-top: 7rem;
+}
+
+.notepad {
+    margin-top: 4rem;
+    height: 18rem
 }
