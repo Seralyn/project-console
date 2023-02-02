@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CheckIns() {
     return ( 
-        <div className="component-border">
+        <div className="component-border side-component">
             <h1>CheckIns Component</h1>
         </div>
      );

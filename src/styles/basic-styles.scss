@@ -23,6 +23,14 @@ body {
     
 }
 
+.clocktray-layout {
+    display: flex;
+    // flex-direction: row;
+    justify-content: center;
+    
+    
+}
+
 .clock-padding {
     padding-left: 100px;
     padding-right: 100px;
@@ -34,7 +42,8 @@ body {
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 15px;
     background-color: #5D7D84;
-}@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+    
+}
 
 .horizontal-layout-child-padding {
     padding: 20px;
@@ -72,4 +81,8 @@ body {
 .notepad {
     margin-top: 4rem;
     height: 18rem
+}
+
+.side-component {
+    height: 23rem;
 }

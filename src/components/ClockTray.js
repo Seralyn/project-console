@@ -5,7 +5,7 @@ import TokyoClock from "../components/TokyoClock"
 
 export default function GreetingBox() {
     return ( 
-        <div className="horizontal-layout">
+        <div className="clocktray-layout">
             <ColoradoClock />
             <LithuaniaClock />
             <TokyoClock />

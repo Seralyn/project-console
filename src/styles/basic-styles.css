@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap");
 body {
   background-color: #80989D;
   color: white;
@@ -14,6 +13,11 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.clocktray-layout {
+  display: flex;
+  justify-content: center;
 }
 
 .clock-padding {
@@ -63,4 +67,8 @@ body {
 .notepad {
   margin-top: 4rem;
   height: 18rem;
+}
+
+.side-component {
+  height: 23rem;
 }/*# sourceMappingURL=basic-styles.css.map */
