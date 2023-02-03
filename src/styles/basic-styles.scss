@@ -6,6 +6,7 @@ $backgroundBlue: #4081b6;
 $mainText: #ffffff;
 $creamy-kelp--text: #80989D;
 $cypun--text: #00e1f1;
+$cypun-alt--text: #ff4b4b;
 $cotton-candy--text: #ffa2ff;
 $midnight--text: #32ceda;
 $simple-and-clean--text: #5238c4;
@@ -43,17 +44,19 @@ $midnight--border: #160e3a;
 $simple-and-clean--border: #cecece;
 $terminal--border: #201e1e;
 
-
 body {
     background-color: $cypun--bg;
     color: $cypun--text;
     font-family: 'Noto Sans', sans-serif;
 }
 
+.cypun-alt--text {
+    color: $cypun-alt--text
+}
+
 .text--white {
     color: $mainText;
 }
-
 
 
 .horizontal-layout {
@@ -63,11 +66,36 @@ body {
     
 }
 
+.themetray-layout {
+    display: flex;
+    align-items: end;  
+    // this works if height is not set to 100% on themetray-item/+-last
+    justify-content: space-between;
+    min-width: 32rem;
+    border: 1px solid;
+    border-color: $cypun--border;
+    margin: 2rem 1rem 2rem 1rem;
+    border-radius: 15px;
+    background-color: $cypun--darker;
+}
+
+.themetray-item {
+    border-right: px solid $cypun--border;
+    height:100%;
+    padding: 0px 15px 0px 15px;
+    
+}
+
+.themetray-item-last {
+    // border-right: 1px solid $cypun--border;
+    // height:100%;
+    padding: 0px 15px 0px 15px;
+}
+
 .clocktray-layout {
     display: flex;
     // flex-direction: row;
     justify-content: center;
-    
     
 }
 
@@ -79,7 +107,7 @@ body {
 .component-border {
     border: 1px solid;
     border-color: $cypun--border;
-    padding: 10px;
+    padding: 2rem;
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 15px;
     background-color: $cypun--darker;
@@ -100,6 +128,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     
 }
 
@@ -121,7 +150,7 @@ body {
 
 .notepad {
     margin-top: 4rem;
-    height: 18rem
+    height: 32rem
 }
 
 .side-component {
@@ -135,4 +164,13 @@ body {
 
 .underline-text {
     text-decoration: underline;
+}
+
+.social-icon-size-constraint {
+    max-width: 40px;
+    // max-height: 40px;
+}
+
+.gmail-icon-sizing-exception {
+    max-width: 50px;
 }

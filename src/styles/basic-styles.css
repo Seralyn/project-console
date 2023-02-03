@@ -5,6 +5,10 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+.cypun-alt--text {
+  color: #ff4b4b;
+}
+
 .text--white {
   color: #ffffff;
 }
@@ -13,6 +17,28 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.themetray-layout {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  min-width: 32rem;
+  border: 1px solid;
+  border-color: #ecfd00;
+  margin: 2rem 1rem 2rem 1rem;
+  border-radius: 15px;
+  background-color: #510170;
+}
+
+.themetray-item {
+  border-right: px solid #ecfd00;
+  height: 100%;
+  padding: 0px 15px 0px 15px;
+}
+
+.themetray-item-last {
+  padding: 0px 15px 0px 15px;
 }
 
 .clocktray-layout {
@@ -28,7 +54,7 @@ body {
 .component-border {
   border: 1px solid;
   border-color: #ecfd00;
-  padding: 10px;
+  padding: 2rem;
   margin: 2rem 1rem 2rem 1rem;
   border-radius: 15px;
   background-color: #510170;
@@ -47,6 +73,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .flex {
@@ -67,7 +94,7 @@ body {
 
 .notepad {
   margin-top: 4rem;
-  height: 18rem;
+  height: 32rem;
 }
 
 .side-component {
@@ -81,4 +108,12 @@ body {
 
 .underline-text {
   text-decoration: underline;
+}
+
+.social-icon-size-constraint {
+  max-width: 40px;
+}
+
+.gmail-icon-sizing-exception {
+  max-width: 50px;
 }/*# sourceMappingURL=basic-styles.css.map */
