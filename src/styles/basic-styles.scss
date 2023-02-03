@@ -1,12 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
 
 $backgroundBlue: #4081b6;
+
+// Text Colors
 $mainText: #ffffff;
+$creamy-kelp--text: #80989D;
+$cypun--text: #00e1f1;
+$cotton-candy--text: #ffa2ff;
+$midnight--text: #32ceda;
+$simple-and-clean--text: #5238c4;
+$terminal--text: #1cd159;
+
+// Backgrounds
 $creamy-kelp--bg: #80989D;
+$cypun--bg: #7700a6;
+$cotton-candy--bg: #ffa2ff;
+$midnight--bg: #201161;
+$simple-and-clean--bg: #ffffff;
+$terminal--bg: #2e2e2e;
+
+//Boxes (darker)
+$creamy-kelp--darker: #557379;
+$cypun--darker: #510170;
+$cotton-candy--darker: #c456c4;
+$midnight--darker: #160e3a;
+$simple-and-clean--darker: #cecece;
+$terminal--darker: #201e1e;
+
+//Lighter/accent
+$creamy-kelp--lighter: #557379;
+$cypun--lighter: #510170;
+$cotton-candy--lighter: #c456c4;
+$midnight--lighter: #160e3a;
+$simple-and-clean--lighter: #cecece;
+$terminal--lighter: #201e1e;
+
+//Borders
+$creamy-kelp--border: #557379;
+$cypun--border: #ecfd00;
+$cotton-candy--border: #c456c4;
+$midnight--border: #160e3a;
+$simple-and-clean--border: #cecece;
+$terminal--border: #201e1e;
+
 
 body {
-    background-color: $creamy-kelp--bg;
-    color: white;
+    background-color: $cypun--bg;
+    color: $cypun--text;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -37,11 +77,12 @@ body {
 }
 
 .component-border {
-    border: 1px white solid;
+    border: 1px solid;
+    border-color: $cypun--border;
     padding: 10px;
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 15px;
-    background-color: #5D7D84;
+    background-color: $cypun--darker;
     
 }
 
@@ -85,4 +126,13 @@ body {
 
 .side-component {
     height: 23rem;
+}
+
+.bold-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.underline-text {
+    text-decoration: underline;
 }

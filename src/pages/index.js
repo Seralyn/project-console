@@ -27,16 +27,17 @@ const IndexPage = () => {
   const now= new Date();
 
   let japanTime = formatToTimeZone(now, timeFORMAT, {timeZone: TIME_ZONE_TOKYO});
-  let japanDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_TOKYO});
+  // let japanDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_TOKYO});
   
   let coloradoTime = formatToTimeZone(now, timeFORMAT, {timeZone: TIME_ZONE_DENVER});
-  let coloradoDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_DENVER});
+  // let coloradoDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_DENVER});
   
   let lithuaniaTime = formatToTimeZone(now, timeFORMAT, {timeZone: TIME_ZONE_LITHUANIA});
   let lithuaniaDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_LITHUANIA});
 
+
   //convert '20:30 --> 20.3'
-  let jstNum = formatToTimeZone(now, checkSchedFORMAT, {timeZone: TIME_ZONE_LITHUANIA}) * 1;
+  let ltNum = formatToTimeZone(now, checkSchedFORMAT, {timeZone: TIME_ZONE_LITHUANIA}) * 1;
   
   
   const [date, setDate] = useState(new Date());
@@ -49,14 +50,14 @@ const IndexPage = () => {
   
   const findSeralynCurrentActivity = () => {
       
-      if (jstNum > 10.3 && jstNum <= 15) { return "Drinking coffee, playing Rimworld etc" }
-      if (jstNum >= 15.01 && jstNum <= 19) { return "Working the busy part of the day" }
-      if (jstNum >= 19.01 && jstNum <= 20) { return "Taking her \"lunch break\" and eating dinner" }
-      if (jstNum >= 20.01 && jstNum <= 23) { return "Working & probably only moderately busy" }
-      // if (jstNum >= 23.01 && jstNum <= 0.3) { return "Dilating" }
-      if (jstNum >= 0.31 && jstNum <= 4) { return "Decompressing/Intoxicating/Media Intake" }
-      if (jstNum >= 4 && jstNum <= 6.3) { return "Probably Sleeping" }
-      if (jstNum >= 6.31 && jstNum <= 10.3) { return "Definitely Sleeping" }
+      if (ltNum > 10.3 && ltNum <= 15) { return "Drinking coffee, playing Rimworld etc" }
+      if (ltNum >= 15.01 && ltNum <= 19) { return "Working the busy part of the day" }
+      if (ltNum >= 19.01 && ltNum <= 20) { return "Taking her \"lunch break\" and eating dinner" }
+      if (ltNum >= 20.01 && ltNum <= 23) { return "Working & probably only moderately busy" }
+      if (ltNum >= 23.01 && ltNum <= 0.3) { return "Belching loudly" }
+      if (ltNum >= 0.31 && ltNum <= 4) { return "Decompressing/Intoxicating/Media Intake" }
+      if (ltNum >= 4 && ltNum <= 6.3) { return "Probably Sleeping" }
+      if (ltNum >= 6.31 && ltNum <= 10.3) { return "Definitely Sleeping" }
       
   }
 
@@ -80,14 +81,14 @@ const IndexPage = () => {
         </div>
       
         <div className="flex flex-column">
-          <GreetingBox className="center-text" />
+          <GreetingBox className="center-text" lithuaniaTimeData = {lithuaniaTime} seralynActivity = {findSeralynCurrentActivity}/>
           <Notepad />
           <SocialNotificationsTray />
         </div>
 
         <div className="flex flex-column side-container-top-margin">
           <ToDos />
-          <CheckIns />
+          <CheckIns lithuanianDateData={lithuaniaDate} />
         </div>
 
       </div>

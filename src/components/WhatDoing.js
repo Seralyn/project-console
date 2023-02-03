@@ -1,10 +1,10 @@
 import React from "react";
 
 
-export default function GreetingHeader() {
+export default function GreetingHeader({seralynActivity}) {
     return ( 
         <div>
-            <h3>Doing X activity, are you?</h3>
+            <h3>Doing *{seralynActivity()}* activity, are you?</h3>
         </div>
      );
 }

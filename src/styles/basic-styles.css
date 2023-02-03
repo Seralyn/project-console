@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap");
 body {
-  background-color: #80989D;
-  color: white;
+  background-color: #7700a6;
+  color: #00e1f1;
   font-family: "Noto Sans", sans-serif;
 }
 
@@ -26,11 +26,12 @@ body {
 }
 
 .component-border {
-  border: 1px white solid;
+  border: 1px solid;
+  border-color: #ecfd00;
   padding: 10px;
   margin: 2rem 1rem 2rem 1rem;
   border-radius: 15px;
-  background-color: #5D7D84;
+  background-color: #510170;
 }
 
 .horizontal-layout-child-padding {
@@ -71,4 +72,13 @@ body {
 
 .side-component {
   height: 23rem;
+}
+
+.bold-text {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.underline-text {
+  text-decoration: underline;
 }/*# sourceMappingURL=basic-styles.css.map */
