@@ -17,7 +17,7 @@ import { formatToTimeZone } from 'date-fns-timezone';
 
 const IndexPage = () => {
 
-  const timeFORMAT = 'HH:mm:ssaa';
+  const timeFORMAT = 'HH:mm:ss';
   const dateFORMAT = 'ddd MMM, Do z';
   const checkSchedFORMAT = 'HH.mm';
   const TIME_ZONE_TOKYO = 'Asia/Tokyo';
