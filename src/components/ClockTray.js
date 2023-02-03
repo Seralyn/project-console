@@ -3,12 +3,16 @@ import ColoradoClock from "../components/ColoradoClock"
 import LithuaniaClock from "../components/LithuaniaClock"
 import TokyoClock from "../components/TokyoClock"
 
-export default function GreetingBox() {
+
+
+export default function ClockTray({coloradoTimeData, lithuaniaTimeData, japanTimeData}) {
+           
+
     return ( 
         <div className="clocktray-layout">
-            <ColoradoClock />
-            <LithuaniaClock />
-            <TokyoClock />
+            <ColoradoClock coloradoTimeData= {coloradoTimeData} />
+            <LithuaniaClock lithuaniaTimeData = {lithuaniaTimeData} />
+            <TokyoClock japanTimeData = {japanTimeData} />
         </div>
      );
 }

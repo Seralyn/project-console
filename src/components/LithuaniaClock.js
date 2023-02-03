@@ -1,10 +1,10 @@
 import React from "react";
 
 
-export default function LithuaniaClock() {
+export default function LithuaniaClock({lithuaniaTimeData}) {
     return ( 
         <div className="clock-padding">
-            <h3>Lithuania: 12:47</h3>
+            <h3>Lithuania: {lithuaniaTimeData}</h3>
         </div>
      );
 }

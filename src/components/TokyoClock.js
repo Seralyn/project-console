@@ -1,10 +1,10 @@
 import React from "react";
 
 
-export default function TokyoClock() {
+export default function TokyoClock({japanTimeData}) {
     return ( 
         <div>
-            <h3>Tokyo: 19:47</h3>
+            <h3>Tokyo: {japanTimeData}</h3>
         </div>
      );
 }
