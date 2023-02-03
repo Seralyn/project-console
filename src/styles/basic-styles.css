@@ -32,7 +32,7 @@ body {
 }
 
 .themetray-item {
-  border-right: px solid #ecfd00;
+  border-right: 1px solid #ecfd00;
   height: 100%;
   padding: 0px 15px 0px 15px;
 }
