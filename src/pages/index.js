@@ -50,19 +50,30 @@ const IndexPage = () => {
   
   const findSeralynCurrentActivity = () => {
       
-      if (ltNum > 10.3 && ltNum <= 15) { return "Drinking coffee, playing Rimworld etc" }
-      if (ltNum >= 15.01 && ltNum <= 19) { return "Working the busy part of the day" }
-      if (ltNum >= 19.01 && ltNum <= 20) { return "Taking her \"lunch break\" and eating dinner" }
-      if (ltNum >= 20.01 && ltNum <= 23) { return "Working & probably only moderately busy" }
-      if (ltNum >= 23.01 && ltNum <= 0.3) { return "Belching loudly" }
-      if (ltNum >= 0.31 && ltNum <= 4) { return "Decompressing/Intoxicating/Media Intake" }
-      if (ltNum >= 4 && ltNum <= 6.3) { return "Probably Sleeping" }
-      if (ltNum >= 6.31 && ltNum <= 10.3) { return "Definitely Sleeping" }
+      if (ltNum > 9.31 && ltNum <= 10.15) { return "Drinking coffee and scrolling" }
+      if (ltNum >= 10.16 && ltNum <= 13) { return "Coding your heart out" }
+      if (ltNum >= 13.01 && ltNum <= 14) { return "Taking your lunch break" }
+      if (ltNum >= 14.01 && ltNum <= 18) { return "Coding and chatting with Paul on Telegram" }
+      if (ltNum >= 18.01 && ltNum <= 20.30) { return "Fucking around doing nothing in particular" }
+      if (ltNum >= 20.31 && ltNum <= 21.30) { return "Cooking or eating dinner" }
+      if (ltNum >= 21.31 && ltNum <= 23.59) { return "Getting high and playing video games" }
+      if (ltNum >= 24.00 && ltNum <= 9.30) { return "Not sleeping, when you should be sleeping" }
       
   }
 
-
-  findSeralynCurrentActivity();
+  
+  const timeOfDay = () => {
+    
+    if (ltNum >= 5.00 && ltNum <= 11.29) { return "Morning"}
+    if (ltNum >= 11.30  && ltNum <= 16.00) { return "Afternoon"}
+    if (ltNum >= 16.01  && ltNum <= 21.00) { return "Evening"}
+    if (ltNum >= 21.01  && ltNum <= 4.59) { return "Night"}
+    console.log(ltNum)
+    return "nothing matches my conditions"
+  }
+  
+  let dayEpochResult =timeOfDay();
+  let fscaResult = findSeralynCurrentActivity();
 
   return (
     <main className="page-container">
@@ -81,7 +92,7 @@ const IndexPage = () => {
         </div>
       
         <div className="flex flex-column">
-          <GreetingBox className="center-text" lithuaniaTimeData = {lithuaniaTime} seralynActivity = {findSeralynCurrentActivity}/>
+          <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity = {fscaResult}/>
           <Notepad />
           <SocialNotificationsTray />
         </div>
