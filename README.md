@@ -1,4 +1,4 @@
-##-------Project Console-------
+## -------Project Console-------
 
 The purpose of this project is to provide myself with a custom page to display upon opening a new tab in a browser. It should display relevant information to my life, including, but not limited to:
 
