@@ -82,6 +82,74 @@ $selected-gray: #333333;
     background-color: $cypun--text;
 }
 
+// ---------------------------
+#CC-bg {
+    background-color: $cotton-candy--bg;
+}
+
+#CC-dk {
+    background-color: $cotton-candy--darker;
+}
+
+#CC-lt {
+    background-color: $cotton-candy--lighter;
+}
+
+#CC-txt {
+    background-color: $cotton-candy--text;
+}
+
+// ---------------------------
+#CS-bg {
+    background-color: $simple-and-clean--bg;
+}
+
+#CS-dk {
+    background-color: $simple-and-clean--darker;
+}
+
+#CS-lt {
+    background-color: $simple-and-clean--lighter;
+}
+
+#CS-txt {
+    background-color: $simple-and-clean--text;
+}
+
+// ---------------------------
+#MDN-bg {
+    background-color: $midnight--bg;
+}
+
+#MDN-dk {
+    background-color: $midnight--darker;
+}
+
+#MDN-lt {
+    background-color: $midnight--lighter;
+}
+
+#MDN-txt {
+    background-color: $midnight--text;
+}
+
+// ---------------------------
+#TRM-bg {
+    background-color: $terminal--bg;
+}
+
+#TRM-dk {
+    background-color: $terminal--darker;
+}
+
+#TRM-lt {
+    background-color: $terminal--lighter;
+}
+
+#TRM-txt {
+    background-color: $terminal--text;
+}
+
 // ------------END THEMETRAY COLOR ID DEFS------------
 body {
     background-color: $cypun--bg;
@@ -224,6 +292,7 @@ body {
     "color3 color4";
     grid-gap: 5px;
     padding: 10px;
+    color: black;
 }
 
 .color-square {

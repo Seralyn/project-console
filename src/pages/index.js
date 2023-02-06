@@ -53,7 +53,7 @@ const IndexPage = () => {
       if (ltNum > 9.31 && ltNum <= 10.15) { return "Drinking coffee and scrolling" }
       if (ltNum >= 10.16 && ltNum <= 13) { return "Coding your heart out" }
       if (ltNum >= 13.01 && ltNum <= 14) { return "Taking your lunch break" }
-      if (ltNum >= 14.01 && ltNum <= 18) { return "Coding and chatting with Paul on Telegram" }
+      if (ltNum >= 14.01 && ltNum <= 18) { return "Coding and chatting on Telegram" }
       if (ltNum >= 18.01 && ltNum <= 20.30) { return "Fucking around doing nothing in particular" }
       if (ltNum >= 20.31 && ltNum <= 21.30) { return "Cooking or eating dinner" }
       if (ltNum >= 21.31 && ltNum <= 23.59) { return "Getting high and playing video games" }

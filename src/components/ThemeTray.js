@@ -26,40 +26,40 @@ export default function ThemeTray() {
             
             <div className="themetray-item">
             <div className="theme-colors-holder">
-                    <div className="color-square">1</div>
-                    <div className="color-square">2</div>
-                    <div className="color-square">3</div>
-                    <div className="color-square">4</div>
+                    <div className="color-square" id="CC-bg">.</div>
+                    <div className="color-square" id="CC-dk"></div>
+                    <div className="color-square" id="CC-lt">.</div>
+                    <div className="color-square" id="CC-txt"></div>
             </div>
                 <div>Cotton Candy</div>
             </div>
             
             <div className="themetray-item">
             <div className="theme-colors-holder">
-                    <div className="color-square">1</div>
-                    <div className="color-square">2</div>
-                    <div className="color-square">3</div>
-                    <div className="color-square">4</div>
+                    <div className="color-square" id="CS-bg">.</div>
+                    <div className="color-square" id="CS-dk"></div>
+                    <div className="color-square" id="CS-lt">.</div>
+                    <div className="color-square" id="CS-txt"></div>
             </div>
                 <div>Clean & Simple</div>
             </div>
             
             <div className="themetray-item">
             <div className="theme-colors-holder">
-                    <div className="color-square">1</div>
-                    <div className="color-square">2</div>
-                    <div className="color-square">3</div>
-                    <div className="color-square">4</div>
+                    <div className="color-square" id="MDN-bg">.</div>
+                    <div className="color-square" id="MDN-dk"></div>
+                    <div className="color-square" id="MDN-lt">.</div>
+                    <div className="color-square" id="MDN-txt"></div>
             </div>
                 <div>Midnight</div>
             </div>
             
             <div className="themetray-item-last">
             <div className="theme-colors-holder">
-                    <div className="color-square">1</div>
-                    <div className="color-square">2</div>
-                    <div className="color-square">3</div>
-                    <div className="color-square">4</div>
+                    <div className="color-square" id="TRM-bg">.</div>
+                    <div className="color-square" id="TRM-dk"></div>
+                    <div className="color-square" id="TRM-lt">.</div>
+                    <div className="color-square" id="TRM-txt"></div>
             </div>
                 <div>Terminal</div>
             </div>
