@@ -224,6 +224,7 @@ body {
 
 .side-component {
   height: 23rem;
+  overflow: hidden;
 }
 
 .bold-text {
