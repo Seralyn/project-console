@@ -4,7 +4,7 @@ import React from "react";
 export default function Upcoming() {
     return ( 
         <div className="component-border side-component">
-            <h1>Upcoming Component</h1>
+            <h1 className="cypun-alt--text">Upcoming Component</h1>
         </div>
      );
 }

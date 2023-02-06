@@ -1,8 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap");
+#CK-bg {
+  background-color: #80989D;
+}
+
+#CK-dk {
+  background-color: #557379;
+}
+
+#CK-lt {
+  background-color: #557379;
+}
+
+#CK-txt {
+  background-color: #80989D;
+}
+
+#CP-bg {
+  background-color: #7700a6;
+}
+
+#CP-dk {
+  background-color: #580479;
+}
+
+#CP-lt {
+  background-color: #510170;
+}
+
+#CP-txt {
+  background-color: #00e1f1;
+}
+
 body {
   background-color: #7700a6;
   color: #00e1f1;
   font-family: "Noto Sans", sans-serif;
+}
+
+.cypun-alt--text {
+  color: #ff4b4b;
 }
 
 .astro-tray {
@@ -60,6 +96,76 @@ body {
   justify-content: space-around;
 }
 
+.themetray-layout {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  min-width: 32rem;
+  border: 1px solid;
+  border-color: #ecfd00;
+  margin: 2rem 1rem 2rem 1rem;
+  border-radius: 15px;
+  background-color: #464646;
+  color: white;
+  overflow: hidden;
+  max-height: 7rem;
+}
+
+.themetray-item {
+  border-right: 1px solid white;
+  height: 100%;
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.themetray-item-last {
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.themetray-selected {
+  border-right: 1px solid white;
+  height: 100%;
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+  background-color: #333333;
+}
+
+.themetray-item:hover {
+  background-color: #333333;
+  cursor: pointer;
+}
+
+.themetray-item-last:hover {
+  background-color: #333333;
+  cursor: pointer;
+}
+
+.theme-colors-holder {
+  display: grid;
+  grid-template-areas: "color1 color2" "color3 color4";
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+.color-square {
+  border: 1px solid white;
+  min-width: 25px;
+  border-radius: 5px;
+}
+
 .clocktray-layout {
   display: flex;
   justify-content: center;
@@ -75,7 +181,7 @@ body {
   border-color: #ecfd00;
   margin: 2rem 1rem 2rem 1rem;
   border-radius: 15px;
-  background-color: #510170;
+  background-color: #580479;
 }
 
 .horizontal-layout-child-padding {
@@ -91,6 +197,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .flex {
@@ -111,7 +218,8 @@ body {
 
 .notepad {
   margin-top: 4rem;
-  height: 18rem;
+  height: 32rem;
+  color: yellow;
 }
 
 .side-component {
@@ -125,4 +233,16 @@ body {
 
 .underline-text {
   text-decoration: underline;
+}
+
+.social-icon-size-constraint {
+  max-width: 40px;
+}
+
+.gmail-icon-sizing-exception {
+  max-width: 50px;
+}
+
+.bottom-align {
+  align-self: flex-end;
 }/*# sourceMappingURL=basic-styles.css.map */

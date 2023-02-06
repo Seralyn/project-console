@@ -6,6 +6,7 @@ $backgroundBlue: #4081b6;
 $mainText: #ffffff;
 $creamy-kelp--text: #80989D;
 $cypun--text: #00e1f1;
+$cypun-alt--text: #ff4b4b;
 $cotton-candy--text: #ffa2ff;
 $midnight--text: #32ceda;
 $simple-and-clean--text: #5238c4;
@@ -21,7 +22,7 @@ $terminal--bg: #2e2e2e;
 
 //Boxes (darker)
 $creamy-kelp--darker: #557379;
-$cypun--darker: #510170;
+$cypun--darker: #580479;
 $cotton-candy--darker: #c456c4;
 $midnight--darker: #160e3a;
 $simple-and-clean--darker: #cecece;
@@ -43,11 +44,53 @@ $midnight--border: #160e3a;
 $simple-and-clean--border: #cecece;
 $terminal--border: #201e1e;
 
+// Other
+$neutral-grey: #464646;
+$selected-gray: #333333;
 
+// ------------START THEMETRAY COLOR ID DEFS------------
+#CK-bg {
+    background-color: $creamy-kelp--bg;
+}
+
+#CK-dk {
+    background-color: $creamy-kelp--darker;
+}
+
+#CK-lt {
+    background-color: $creamy-kelp--lighter;
+}
+
+#CK-txt {
+    background-color: $creamy-kelp--text;
+}
+
+// ---------------------------
+#CP-bg {
+    background-color: $cypun--bg;
+}
+
+#CP-dk {
+    background-color: $cypun--darker;
+}
+
+#CP-lt {
+    background-color: $cypun--lighter;
+}
+
+#CP-txt {
+    background-color: $cypun--text;
+}
+
+// ------------END THEMETRAY COLOR ID DEFS------------
 body {
     background-color: $cypun--bg;
     color: $cypun--text;
     font-family: 'Noto Sans', sans-serif;
+}
+
+.cypun-alt--text {
+    color: $cypun-alt--text
 }
 
 .astro-tray {
@@ -104,7 +147,6 @@ body {
 }
 
 
-
 .horizontal-layout {
     display: flex;
     flex-direction: row;
@@ -112,11 +154,90 @@ body {
     
 }
 
+
+// THEMETRAY START ---------------
+
+.themetray-layout {
+    display: flex;
+    align-items: end;  
+    // this works if height is not set to 100% on themetray-item/+-last
+    justify-content: space-between;
+    min-width: 32rem;
+    border: 1px solid;
+    border-color: $cypun--border;
+    margin: 2rem 1rem 2rem 1rem;
+    border-radius: 15px;
+    background-color: $neutral-grey;
+    color: white;
+    overflow: hidden;
+    max-height: 7rem;
+}
+
+.themetray-item {
+    border-right: 1px solid white;
+    height:100%;
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    
+}
+
+.themetray-item-last {
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.themetray-selected {
+    border-right: 1px solid white;
+    height:100%;
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    background-color: $selected-gray;
+    
+}
+
+.themetray-item:hover {
+    background-color: $selected-gray;
+    cursor: pointer;
+}
+
+.themetray-item-last:hover {
+    background-color: $selected-gray;
+    cursor: pointer;
+}
+
+.theme-colors-holder {
+    display: grid;
+    grid-template-areas: 
+    "color1 color2" 
+    "color3 color4";
+    grid-gap: 5px;
+    padding: 10px;
+}
+
+.color-square {
+    border: 1px solid white;
+    min-width: 25px;
+    border-radius: 5px;
+}
+
+// THEMETRAY END ---------------
+
 .clocktray-layout {
     display: flex;
     // flex-direction: row;
     justify-content: center;
-    
     
 }
 
@@ -128,7 +249,7 @@ body {
 .component-border {
     border: 1px solid;
     border-color: $cypun--border;
-    // padding: 10px;
+    // padding: 2rem;
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 15px;
     background-color: $cypun--darker;
@@ -149,6 +270,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     
 }
 
@@ -170,7 +292,8 @@ body {
 
 .notepad {
     margin-top: 4rem;
-    height: 18rem
+    height: 32rem;
+    color: yellow;
 }
 
 .side-component {
@@ -184,4 +307,17 @@ body {
 
 .underline-text {
     text-decoration: underline;
+}
+
+.social-icon-size-constraint {
+    max-width: 40px;
+    // max-height: 40px;
+}
+
+.gmail-icon-sizing-exception {
+    max-width: 50px;
+}
+
+.bottom-align {
+    align-self: flex-end;
 }
