@@ -66,6 +66,9 @@ body {
     
 }
 
+
+// THEMETRAY START ---------------
+
 .themetray-layout {
     display: flex;
     align-items: end;  
@@ -77,6 +80,7 @@ body {
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 15px;
     background-color: $cypun--darker;
+    overflow: hidden;
 }
 
 .themetray-item {
@@ -91,6 +95,8 @@ body {
     // height:100%;
     padding: 0px 15px 0px 15px;
 }
+
+// THEMETRAY END ---------------
 
 .clocktray-layout {
     display: flex;
@@ -150,7 +156,8 @@ body {
 
 .notepad {
     margin-top: 4rem;
-    height: 32rem
+    height: 32rem;
+    color: yellow;
 }
 
 .side-component {
@@ -173,4 +180,8 @@ body {
 
 .gmail-icon-sizing-exception {
     max-width: 50px;
+}
+
+.bottom-align {
+    align-self: flex-end;
 }

@@ -29,6 +29,7 @@ body {
   margin: 2rem 1rem 2rem 1rem;
   border-radius: 15px;
   background-color: #580479;
+  overflow: hidden;
 }
 
 .themetray-item {
@@ -95,6 +96,7 @@ body {
 .notepad {
   margin-top: 4rem;
   height: 32rem;
+  color: yellow;
 }
 
 .side-component {
@@ -116,4 +118,8 @@ body {
 
 .gmail-icon-sizing-exception {
   max-width: 50px;
+}
+
+.bottom-align {
+  align-self: flex-end;
 }/*# sourceMappingURL=basic-styles.css.map */
