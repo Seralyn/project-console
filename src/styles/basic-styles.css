@@ -255,7 +255,7 @@ body {
 
 .top-row-layout {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .social-icons-spacing {
