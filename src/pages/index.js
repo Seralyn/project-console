@@ -13,6 +13,7 @@ import SocialNotificationsTray from "../components/SocialNotificationsTray";
 import CheckIns from "../components/CheckIns"
 import { useState, useEffect } from 'react'
 import { formatToTimeZone } from 'date-fns-timezone';
+import CurrentWeather from "../components/CurrentWeather";
 
 
 // Test: 149.154.167.40:443
@@ -118,11 +119,12 @@ const IndexPage = () => {
 
         <div className="layout-column-middle">
           <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity = {fscaResult}/>
-          <SocialNotificationsTray />
+          
           <GoogleCalendar />
         </div>
 
         <div className="layout-column-right">
+          <CurrentWeather />
           <ToDos />
           <CheckIns lithuanianDateData={lithuaniaDate} />
         </div>

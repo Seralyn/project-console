@@ -34,6 +34,7 @@ export default function CloudCoverTray() {
                     <div className="day-of-week">Sun</div>
                 </div>
             </div>
+            {/* <div>poo</div> */}
         </div>
      );
 }

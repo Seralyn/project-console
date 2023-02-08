@@ -151,12 +151,33 @@ $selected-gray: #333333;
 }
 
 // ------------END THEMETRAY COLOR ID DEFS------------
+
+// works, if NOT inside FAKE NEWS MEDIA QUERY
+// @media only screen and (height: 1300px) {
+//     html,body {
+//         height: 100%;
+//         margin: 0;
+//         overflow: hidden;
+        
+//      }
+//   }
+
+
+
+
 body {
     // background-color: ;
     background: $midnight--bg;
     color: $cypun--text;
     font-family: 'Noto Sans', sans-serif;
 }
+
+textarea {
+    background-color: #06092D;
+    color:rgb(24, 204, 195);
+    font-family: 'Noto Sans', sans-serif;
+}
+
 
 li {
     margin-bottom:10px;
@@ -211,7 +232,9 @@ h2 {
     flex-direction: column;
     justify-content: space-evenly;
     margin-right: 2rem;
+    align-items: center;
 }
+
 
 // ----------END BASIC PLACEMENT-----------
 
@@ -271,6 +294,11 @@ h2 {
     
 }
 
+.centered-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 // THEMETRAY START ---------------
 
@@ -325,12 +353,12 @@ h2 {
 }
 
 .themetray-item:hover {
-    background-color: #1d143f;
+    text-decoration: underline;
     cursor: pointer;
 }
 
 .themetray-item-last:hover {
-    background-color: #1d143f;
+    text-decoration: underline;
     cursor: pointer;
 }
 
@@ -393,6 +421,12 @@ iframe {
     
 }
 
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .flex {
     display: flex;
 }
@@ -415,6 +449,11 @@ iframe {
     height: 32rem;
     color: yellow;
     max-width: 18rem;
+}
+
+.divider-bar {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .side-component {
