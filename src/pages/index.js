@@ -103,32 +103,31 @@ const IndexPage = () => {
 
   return (
     <main className="page-container">
-      <div className="top-row-layout">
+      
+      <div className="level-one--top">
         <ThemeTray />
         <CloudCoverTray />
       </div>
       
-      <ClockTray coloradoTimeData = {coloradoTime} lithuaniaTimeData = {lithuaniaTime} japanTimeData = {japanTime} />
-
-      <div className="top-row-layout">
-
-        <div className="flex flex-column side-container-top-margin">
+      <div className="level-one--bottom">
+        <div className="layout-column-left">
+          <ClockTray coloradoTimeData = {coloradoTime} lithuaniaTimeData = {lithuaniaTime} japanTimeData = {japanTime} />
           <Upcoming />
+          <Notepad />
+        </div>
+
+        <div className="layout-column-middle">
+          <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity = {fscaResult}/>
+          <SocialNotificationsTray />
           <GoogleCalendar />
         </div>
-      
-        <div className="flex flex-column">
-          <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity = {fscaResult}/>
-          <Notepad />
-          <SocialNotificationsTray />
-        </div>
 
-        <div className="flex flex-column side-container-top-margin">
+        <div className="layout-column-right">
           <ToDos />
           <CheckIns lithuanianDateData={lithuaniaDate} />
         </div>
-
       </div>
+      
     </main>
   )
 }

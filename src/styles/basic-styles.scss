@@ -16,7 +16,7 @@ $terminal--text: #1cd159;
 $creamy-kelp--bg: #80989D;
 $cypun--bg: #7700a6;
 $cotton-candy--bg: #ffa2ff;
-$midnight--bg: #201161;
+$midnight--bg: radial-gradient(50% 158.02% at 50% 50%, rgba(20, 0, 255, 0.142) 0%, rgba(0, 0, 0, 0) 100%),#06092D;
 $simple-and-clean--bg: #ffffff;
 $terminal--bg: #2e2e2e;
 
@@ -152,9 +152,19 @@ $selected-gray: #333333;
 
 // ------------END THEMETRAY COLOR ID DEFS------------
 body {
-    background-color: $cypun--bg;
+    // background-color: ;
+    background: $midnight--bg;
     color: $cypun--text;
     font-family: 'Noto Sans', sans-serif;
+}
+
+li {
+    margin-bottom:10px;
+}
+
+h2 {
+    text-decoration: underline;
+    margin-top: 4rem;
 }
 
 .cypun-alt--text {
@@ -165,6 +175,45 @@ body {
     width: 27rem;
     display: flex;
 }
+
+// ----------START BASIC PLACEMENT-----------
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.level-one--top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.level-one--bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout-column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+}
+
+.layout-column-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.layout-column-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 2rem;
+}
+
+// ----------END BASIC PLACEMENT-----------
 
 .col {
     flex-grow: 1;
@@ -231,25 +280,25 @@ body {
     // this works if height is not set to 100% on themetray-item/+-last
     justify-content: space-between;
     min-width: 32rem;
-    border: 1px solid;
-    border-color: $cypun--border;
+    // border: 1px solid;
+    
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 15px;
-    background-color: $neutral-grey;
-    color: white;
+    
+    color: rgb(24, 204, 195);
     overflow: hidden;
     max-height: 7rem;
 }
 
 .themetray-item {
     border-right: 1px solid white;
-    height:100%;
+    // height:100%;
     padding: 0px 15px 0px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     
 }
 
@@ -259,29 +308,29 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .themetray-selected {
     border-right: 1px solid white;
-    height:100%;
+    // height:100%;
     padding: 0px 15px 0px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 10px;
-    background-color: $selected-gray;
+    padding-bottom: 5px;
+    text-decoration: underline;
     
 }
 
 .themetray-item:hover {
-    background-color: $selected-gray;
+    background-color: #1d143f;
     cursor: pointer;
 }
 
 .themetray-item-last:hover {
-    background-color: $selected-gray;
+    background-color: #1d143f;
     cursor: pointer;
 }
 
@@ -303,27 +352,28 @@ body {
 
 // THEMETRAY END ---------------
 
+iframe {
+    filter: invert(.9) saturate(0.5) hue-rotate(145deg);
+ }
+
 .clocktray-layout {
     display: flex;
-    // flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 4rem;
+    
     
 }
 
-.clock-padding {
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.component-border {
-    border: 1px solid;
-    border-color: $cypun--border;
-    // padding: 2rem;
-    margin: 2rem 1rem 2rem 1rem;
-    border-radius: 15px;
-    background-color: $cypun--darker;
+// .component-border {
+//     border: 1px solid;
+//     border-color: $cypun--border;
+//     // padding: 2rem;
+//     margin: 2rem 1rem 2rem 1rem;
+//     border-radius: 15px;
+//     background-color: $cypun--darker;
     
-}
+// }
 
 .horizontal-layout-child-padding {
     padding: 20px;
@@ -364,6 +414,7 @@ body {
     margin-top: 4rem;
     height: 32rem;
     color: yellow;
+    max-width: 18rem;
 }
 
 .side-component {
