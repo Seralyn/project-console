@@ -9,6 +9,7 @@ function Button( { label, backgroundColor = 'blue', size = 'md', onClick }) {
         backgroundColor,
         padding: `${scale * 0.5}rem ${scale * 1}rem`,
         border: "none",
+        color: "white"
     }
     return ( 
     <button onClick={onClick} style={style}>

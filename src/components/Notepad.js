@@ -1,34 +1,59 @@
 import React from "react";
 import Button from "./Button";
-// import * as React from "react"
+import { useState, useEffect } from "react";
+// import { useLocalStorage } from "../components/useLocalStorage";
 
 export default function Notepad() {
+      const [notepadInput, setNotepadInput] = useState( localStorage.getItem("a") | "Type something...");
+      console.log(notepadInput)
 
-    //   save whatever text is currently inside textarea to localstorage
-      const saveText = (e) => {
-        // e.preventDefault();
-        let notepadInput = document.getElementById("notepad").innerText;
-        // statement below takes a key, value pair, which I have named notepadContents and notepadInput, respectively
-        document.getElementById("notepad").innerHTML.localStorage.setItem("notepadContents",{notepadInput})
+      // useEffect((e) => {
+      //   // 👇️ call method in useEffect hook
+      //   let notepadInput = document.getElementById('notepad').textContent;
+      //   console.log(notepadInput);
+      // }, [notepadInput]);
+
+      const saveText = () => {
+        console.log("Save was clicked, notepad value is: " +{notepadInput})
+        localStorage.setItem("a", JSON.stringify(notepadInput))
       }
 
-
-    //   clear all notepad input text and also save to localstorage the new empty state
-      const clearText = (e) => {
-        // e.preventDefault();
-        document.getElementById("notepad").innerHTML.localStorage.removeItem("notepadContents");
-        
-      }
 
     return ( 
         <div className="component-border notepad">
-            <h2>Notepad Component</h2>
-            <textarea id="notepad" name="notepad" rows="12" cols="40"></textarea>
+            <h2>Notepad</h2>
+            <textarea 
+              id="notepad" 
+              name="notepad" 
+              value={notepadInput} 
+              rows="12" 
+              cols="40"
+              onChange={(e) => setNotepadInput(e.target.value)}>
+
+              {/* onChange={(e) => setNotepadInput(e.target.notepadInput)}>  */}
+            </textarea>
             <div>
-                <Button label="Save" id="Save" onClick={saveText} />
-                <Button label= "Clear" id="Clear" onClick={clearText} />
+                <button label="Save" id="Save" onClick={saveText}>Save</button>
+                {/* <Button label= "Clear" id="Clear" onClick={clearText} /> */}
             </div>    
         </div>
      );
 }
 
+
+
+    // //   save whatever text is currently inside textarea to localstorage
+    //   const saveText = (e) => {
+    //     e.preventDefault();
+    //     // let notepadInput = document.getElementById("notepad").innerText;
+    //     // statement below takes a key, value pair, which I have named notepadContents and notepadInput, respectively
+    //     notepadInput.localStorage.setItem("notepadInput", JSON.stringify(notepadInput))
+    //   }
+
+
+    // //   clear all notepad input text and also save to localstorage the new empty state
+    //   const clearText = (e) => {
+    //     // e.preventDefault();
+    //     document.getElementById("notepad").innerHTML.localStorage.removeItem("notepadContents");
+        
+    //   }

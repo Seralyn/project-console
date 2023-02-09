@@ -4,7 +4,7 @@ import React from "react";
 export default function ToDos() {
     return ( 
         <div className="component-border side-component">
-            <h2 className="cypun-alt--text">ToDos Component</h2>
+            <h2 className="cypun-alt--text">ToDos</h2>
             <ul>
                 <li>Lorem Ipsum</li>
                 <li>Lorem Ipsum</li>
