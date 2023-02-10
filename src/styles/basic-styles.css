@@ -114,7 +114,7 @@ li {
 
 h2 {
   text-decoration: underline;
-  margin-top: 4rem;
+  margin-top: 7rem;
 }
 
 .cypun-alt--text {
@@ -144,7 +144,7 @@ h2 {
 .layout-column-left {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
   margin-left: 2rem;
 }
 
@@ -283,6 +283,11 @@ h2 {
   border-radius: 5px;
 }
 
+.clock-row {
+  display: flex;
+  align-items: center;
+}
+
 iframe {
   filter: invert(0.9) saturate(0.5) hue-rotate(145deg);
 }
@@ -338,7 +343,7 @@ iframe {
 }
 
 .notepad {
-  margin-top: 4rem;
+  margin-top: 9rem;
   height: 32rem;
   color: yellow;
   max-width: 18rem;
