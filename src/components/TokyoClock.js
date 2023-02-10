@@ -1,10 +1,10 @@
 import React from "react";
-
+import { Icon } from '@iconify/react';
 
 export default function TokyoClock({japanTimeData}) {
     return ( 
         <div>
-            <h3>Tokyo: {japanTimeData}</h3>
+            <h3><span><Icon icon="openmoji:flag-japan" /></span> : {japanTimeData}</h3>
         </div>
      );
 }

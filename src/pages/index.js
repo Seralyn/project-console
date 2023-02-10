@@ -125,8 +125,8 @@ const IndexPage = () => {
 
         <div className="layout-column-right">
           <CurrentWeather />
-          <ToDos />
           <CheckIns lithuanianDateData={lithuaniaDate} />
+          <ToDos />
         </div>
       </div>
       

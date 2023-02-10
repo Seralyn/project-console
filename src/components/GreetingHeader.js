@@ -5,7 +5,7 @@ export default function GreetingHeader({dayEpoch}) {
 
     return ( 
         <div>
-            <h1>Good {dayEpoch}, Cerelen!</h1>
+            <h1 className="fade-in-text">Good {dayEpoch}, Cerelen!</h1>
         </div>
      );
 }

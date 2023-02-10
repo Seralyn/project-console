@@ -4,17 +4,31 @@ import { useState, useEffect } from "react";
 // import { useLocalStorage } from "../components/useLocalStorage";
 
 export default function Notepad() {
+      
       const [notepadInput, setNotepadInput] = useState( localStorage.getItem("a") | "Type something...");
-      console.log(notepadInput)
+      console.log("After useState initialized " + notepadInput)
 
-      // useEffect((e) => {
-      //   // 👇️ call method in useEffect hook
-      //   let notepadInput = document.getElementById('notepad').textContent;
-      //   console.log(notepadInput);
-      // }, [notepadInput]);
+      // -----------------------------
+      
+      const [items, setItems] = useState([]);
 
-      const saveText = () => {
-        console.log("Save was clicked, notepad value is: " +{notepadInput})
+      useEffect(() => {
+        localStorage.setItem('items', JSON.stringify(items));
+      }, [items]);
+
+
+      useEffect(() => {
+        const items = JSON.parse(localStorage.getItem('items'));
+        if (items) {
+         setItems(items);
+        }
+      }, []);
+
+      // -----------------------------
+
+      const saveText = (e) => {
+        e.preventDefault();
+        console.log("Save was clicked, notepad value is: " +JSON.stringify(notepadInput))
         localStorage.setItem("a", JSON.stringify(notepadInput))
       }
 
