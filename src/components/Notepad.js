@@ -5,22 +5,22 @@ import { useState, useEffect } from "react";
 
 export default function Notepad() {
       
-      const [notepadInput, setNotepadInput] = useState( localStorage.getItem("a") | "Type something...");
-      console.log("After useState initialized " + notepadInput)
+      // const [notepadInput, setNotepadInput] = useState( localStorage.getItem("a") | "Type something...");
+      
 
       // -----------------------------
       
-      const [items, setItems] = useState([]);
+      const [notepadInput, setNotepadInput] = useState([]);
 
       useEffect(() => {
-        localStorage.setItem('items', JSON.stringify(items));
-      }, [items]);
+        localStorage.setItem('notepadInput', JSON.stringify(notepadInput));
+      }, [notepadInput]);
 
 
       useEffect(() => {
-        const items = JSON.parse(localStorage.getItem('items'));
-        if (items) {
-         setItems(items);
+        const notepadInput = JSON.parse(localStorage.getItem('notepadInput'));
+        if (notepadInput) {
+         setNotepadInput(notepadInput);
         }
       }, []);
 
@@ -28,8 +28,12 @@ export default function Notepad() {
 
       const saveText = (e) => {
         e.preventDefault();
-        console.log("Save was clicked, notepad value is: " +JSON.stringify(notepadInput))
-        localStorage.setItem("a", JSON.stringify(notepadInput))
+        console.log("Save was clicked, notepad value is: " +JSON.stringify(notepadInput));
+        localStorage.setItem("a", JSON.stringify(notepadInput));
+      }
+
+      const insertNotepadInput = () => {
+        return notepadInput;
       }
 
 
@@ -42,8 +46,8 @@ export default function Notepad() {
               value={notepadInput} 
               rows="12" 
               cols="40"
-              onChange={(e) => setNotepadInput(e.target.value)}>
-
+              onChange={(e) => setNotepadInput(e.target.value)}
+              placeholder={(notepadInput) ? insertNotepadInput() : "Type Todo here..."}>
               {/* onChange={(e) => setNotepadInput(e.target.notepadInput)}>  */}
             </textarea>
             <div>
