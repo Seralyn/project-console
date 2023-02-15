@@ -398,6 +398,19 @@ iframe {
     
 }
 
+.social-notification-badge {
+  background-color: #fa3e3e;
+  border-radius: 2px;
+  color: white;
+ 
+  padding: 1px 3px;
+  font-size: 10px;
+  
+  position: absolute; /* Position the badge within the relatively positioned button */
+  top: 0;
+  right: 0;
+}
+
 // .component-border {
 //     border: 1px solid;
 //     border-color: $cypun--border;
@@ -579,7 +592,7 @@ iframe {
 .todo-container{
   margin: 10px 0;
   height: 25vh;
-  overflow: scroll;
+//   overflow: scroll;
   padding: 20px;
 }
 

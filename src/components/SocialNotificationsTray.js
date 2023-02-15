@@ -3,13 +3,22 @@ import messengerIcon from '../images/chat.png';
 import gmailIcon from '../images/envelope.png';
 import TelegramAPI from "./TelegramAPI";
 import Messenger from "./Messenger";
+import GMail from "./GMail";
 
-export default function SocialNotificationsTray() {
+export default function SocialNotificationsTray({socialNotifications}) {
+    const insertNotificationBadge = (socialNotifications) => {
+        if (socialNotifications >= 1) {
+            return (<span className="social-notification-badge">socialNotifications</span>)
+        } else {
+            return ("");
+        }
+    }
+    
     return ( 
         <div className="social-icons-spacing">
-            <TelegramAPI />
+            <TelegramAPI insertNotificationBadge={insertNotificationBadge} socialNotifications={socialNotifications}/>
             <Messenger />
-            <div className="horizontal-layout-child-padding"><img className="gmail-icon-sizing-exception" src={gmailIcon} alt="Gmail Icon" /></div>
+            <GMail />
         </div>
      );
 }

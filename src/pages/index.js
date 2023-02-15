@@ -16,6 +16,13 @@ import { formatToTimeZone } from 'date-fns-timezone';
 import CurrentWeather from "../components/CurrentWeather";
 
 
+
+// App api_id:
+// 22128585
+
+// app api_hash:
+// b40aa83bbd80178e9bef6b4c3c3929e5
+
 // Test: 149.154.167.40:443
 // -----BEGIN RSA PUBLIC KEY-----
 // MIIBCgKCAQEAyMEdY1aR+sCR3ZSJrtztKTKqigvO/vBfqACJLZtS7QMgCGXJ6XIR
@@ -44,6 +51,7 @@ import CurrentWeather from "../components/CurrentWeather";
 
 const IndexPage = () => {
 
+  // --------CLOCK LOGIC START-----------
   const timeFORMAT = 'HH:mm';
   const dateFORMAT = 'ddd MMM, Do z';
   const checkSchedFORMAT = 'HH.mm';
@@ -74,6 +82,9 @@ const IndexPage = () => {
   }
   useEffect(() => {setInterval(refreshClock, 1000)}, []);
 
+  // --------CLOCK LOGIC END-----------
+
+  // --------ACTIVITY LOGIC START-----------
   
   const findSeralynCurrentActivity = () => {
       
@@ -102,6 +113,18 @@ const IndexPage = () => {
   let dayEpochResult =timeOfDay();
   let fscaResult = findSeralynCurrentActivity();
 
+  // --------ACTIVITY LOGIC END-----------
+
+  // --------SOCIAL NOTIFICATION BADGE LOGIC START-----------
+
+  let socialNotifications = 2;
+  
+  
+    
+    
+
+  // --------SOCIAL NOTIFICATION BADGE LOGIC END-----------
+
   return (
     <main className="page-container">
       
@@ -118,7 +141,7 @@ const IndexPage = () => {
         </div>
 
         <div className="layout-column-middle">
-          <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity = {fscaResult}/>
+          <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} socialNotifications={socialNotifications} />
           
           <GoogleCalendar />
         </div>
