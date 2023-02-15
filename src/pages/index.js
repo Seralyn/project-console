@@ -16,6 +16,7 @@ import { formatToTimeZone } from 'date-fns-timezone';
 import CurrentWeather from "../components/CurrentWeather";
 
 
+// -------------- BEGIN TELEGRAM API STUFF ----------------
 
 // App api_id:
 // 22128585
@@ -44,7 +45,7 @@ import CurrentWeather from "../components/CurrentWeather";
 // 5+bfo3Nhmcyvk5ftB0WkJ9z6bNZ7yxrP8wIDAQAB
 // -----END RSA PUBLIC KEY-----
 
-
+// -------------- END TELEGRAM API STUFF ----------------
 
 
 
