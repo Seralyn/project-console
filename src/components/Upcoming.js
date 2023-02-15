@@ -10,7 +10,7 @@ export default function Upcoming() {
         "apiKey": googleCalendarAPIKey,
         "scope": "https://www.googleapis.com/auth/calendar",
         "discoveryDocs": [],
-        // "clientSecret": "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",
+        "clientSecret": "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",
     }
 
     const apiCalendar = new ApiCalendar(config);
