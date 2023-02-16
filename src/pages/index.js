@@ -14,6 +14,11 @@ import CheckIns from "../components/CheckIns"
 import { useState, useEffect } from 'react'
 import { formatToTimeZone } from 'date-fns-timezone';
 import CurrentWeather from "../components/CurrentWeather";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import Typography from "@material-ui/core/Typography";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
 
 
 // -------------- BEGIN TELEGRAM API STUFF ----------------
@@ -118,8 +123,9 @@ const IndexPage = () => {
 
   // --------SOCIAL NOTIFICATION BADGE LOGIC START-----------
 
-  let socialNotifications = 2;
-  
+  let telegramNotifications = 2;
+  let messengerNotifications = 6;
+  let gmailNotifications = 4;
   
     
     
@@ -142,9 +148,18 @@ const IndexPage = () => {
         </div>
 
         <div className="layout-column-middle">
-          <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} socialNotifications={socialNotifications} />
+          <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} telegramNotifications={telegramNotifications} messengerNotifications={messengerNotifications} gmailNotifications={gmailNotifications} />
+          <Accordion style={{ width: 650, backgroundColor: "#32ceda" }}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
+              <Typography style={{ fontWeight: 10, }}>Google Calendar</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <GoogleCalendar />
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
           
-          <GoogleCalendar />
         </div>
 
         <div className="layout-column-right">
