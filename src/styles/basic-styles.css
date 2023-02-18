@@ -106,6 +106,8 @@ textarea {
   background-color: #06092D;
   color: rgb(24, 204, 195);
   font-family: "Noto Sans", sans-serif;
+  border-radius: 15px;
+  margin-top: 0.5rem;
 }
 
 li {
@@ -126,6 +128,18 @@ h2 {
   display: flex;
 }
 
+.weather-location-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -134,6 +148,7 @@ h2 {
 .level-one--top {
   display: flex;
   justify-content: space-between;
+  align-items: start;
 }
 
 .level-one--bottom {
@@ -359,7 +374,7 @@ iframe {
 }
 
 .notepad {
-  margin-top: 9rem;
+  margin-top: 2rem;
   height: 32rem;
   color: yellow;
   max-width: 18rem;

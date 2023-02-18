@@ -3,7 +3,7 @@ import React from "react";
 
 export default function GMail({gmailNotifications, insertGmailNotificationBadge}) {
     
-    console.log("gmailNotifications: " + gmailNotifications);
+    
     return ( 
         <div>
             <div className="horizontal-layout-child-padding position-relative">

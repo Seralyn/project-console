@@ -15,10 +15,8 @@ export default function CurrentWeather(props) {
     //     "https://api.weatherapi.com/v1/astronomy.json?key=a19d19d5317a40198b762206222204&q=" +
     //     props.cityName;
 
-    // const baseURLForecast =
-    //     "https://api.weatherapi.com/v1/forecast.json?key=a19d19d5317a40198b762206222204&q=" +
-    //     props.cityName +
-    //     "&days=5&aqi=no&alerts=no";
+    const baseURLForecast =
+        "https://api.weatherapi.com/v1/forecast.json?key=a19d19d5317a40198b762206222204&q=&days=7&aqi=no&alerts=no";
 
     
     const getThatWeatherForMe = () => {
@@ -27,13 +25,16 @@ export default function CurrentWeather(props) {
     });
     }
 
-    getThatWeatherForMe();
+    const getThatForecastForMe = () => {
+        axios.get(baseURLForecast).then((resp) => {
+            setForecastWeatherData(resp.data);
+    });
+    }
 
-    // if (props.cityName) {
-    //     axios.get(baseURLAstro).then((resp) => {
-    //         setAstroWeatherData(resp.data);
-    //     });
-    // }
+    getThatWeatherForMe();
+    // getThatForecastForMe();
+
+    
 
     return ( 
         <div className="component-border side-component">
@@ -51,4 +52,6 @@ export default function CurrentWeather(props) {
         </div>
      );
 }
+
+
 

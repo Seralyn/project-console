@@ -24,21 +24,23 @@ export default function Upcoming() {
         }
       }
 
-      const showEvents = (events) => {
-        apiCalendar.listUpcomingEvents(events);
+      const showEvents = () => {
+        apiCalendar.listUpcomingEvents(10).then(function (_a) {
+            var result = _a.result;
+            console.log(result.items);
+        });
       }
-    //   const showEvents = apiCalendar.listUpcomingEvents({"maxResults": 4, "calendarId": "this.calendar"});
     
     return ( 
         <div className="component-border side-component">
             <h2 className="cypun-alt--text">Upcoming </h2>
             <div>{showEvents}</div>
             <ul>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
-                <li>Lorem Ipsum</li>
+                <li>Munch, Thur 2/16/23 @ 19:00</li>
+                <li>Dentist, Sat 2/18/23 @ 13:00</li>
+                <li>Coffee Date w/ Sun Tzu, Sun 2/19/23 @ 15:00</li>
+                <li>Visa pickup, Thur 2/23/23 @ 11:00</li>
+                <li>Movie date w/ President of Iran, Thur 2/23/23 @ 18:00</li>
             </ul>
             <button
                   onClick={(e) => handleItemClick(e, 'sign-in')}
