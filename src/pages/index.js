@@ -153,7 +153,7 @@ const IndexPage = () => {
           <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} telegramNotifications={telegramNotifications} messengerNotifications={messengerNotifications} gmailNotifications={gmailNotifications} />
           <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
-              <Typography style={{ fontWeight: 10, color: "#ffffff" }}>Google Calendar</Typography>
+              <Typography style={{ fontWeight: 10, color: "#ff4b4b" }}>Google Calendar</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>

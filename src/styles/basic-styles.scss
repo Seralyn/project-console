@@ -180,8 +180,8 @@ body {
 
 .card-colorful {
     padding: 2rem;
-    color: white;
-    background: linear-gradient(90deg, rgba(97,63,251,1) 0%, rgba(216,70,252,1) 100%);;
+    color: #ff4b4b;
+    background: linear-gradient(90deg, rgb(64, 52, 116) 0%, rgb(116, 61, 129) 100%);
     border-radius: 15px;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -501,7 +501,7 @@ iframe {
 }
 
 .small-margin-top {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .flex {

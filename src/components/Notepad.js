@@ -5,13 +5,32 @@ import { useState, useEffect } from "react";
 
 export default function Notepad() {
       
-    const [notepadInput, setNotepadInput] = useState(localStorage.getItem("notepadInput"));
+      const [notepadInput, setNotepadInput] = useState(localStorage.getItem("notepadInput"));
 
-    const handleTextarea = e => {
-      const val = e.target.value;
-      setNotepadInput(val);
-      localStorage.setItem("notepadInput", val);
-    }
+      useEffect(() => {
+        localStorage.setItem('notepadInput', notepadInput);
+      }, [notepadInput]);
+
+
+      useEffect(() => {
+        const notepadInput = localStorage.getItem('notepadInput');
+        if (notepadInput) {
+         setNotepadInput(notepadInput);
+        }
+      });
+
+      // -----------------------------
+
+      // const saveText = (e) => {
+      //   e.preventDefault();
+      //   console.log("Save was clicked, notepad value is: " +notepadInput);
+      //   localStorage.setItem("notepadInput", notepadInput);
+      // }
+
+      const insertNotepadInput = () => {
+        return notepadInput;
+      }
+
 
     return ( 
         <div className="component-border notepad card">
@@ -22,8 +41,8 @@ export default function Notepad() {
               value={notepadInput} 
               rows="12" 
               cols="40"
-              onChange={handleTextarea}
-              placeholder={notepadInput ? notepadInput : "Type Todo here..."}>
+              onChange={(e) => setNotepadInput(e.target.value)}
+              placeholder={(notepadInput) ? insertNotepadInput() : "Type Todo here..."}>
               
             </textarea>
               
