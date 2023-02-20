@@ -8,6 +8,7 @@ $creamy-kelp--text: #80989D;
 $cypun--text: #00e1f1;
 $cypun-alt--text: #ff4b4b;
 $cotton-candy--text: #ffa2ff;
+$simple-dark--text: #a32d2d;
 $midnight--text: #32ceda;
 $simple-and-clean--text: #5238c4;
 $terminal--text: #1cd159;
@@ -16,9 +17,13 @@ $terminal--text: #1cd159;
 $creamy-kelp--bg: #80989D;
 $cypun--bg: #7700a6;
 $cotton-candy--bg: #ffa2ff;
+$simple-dark--bg: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(37, 37, 37) 100%); 
 $midnight--bg: radial-gradient(50% 158.02% at 50% 50%, rgba(20, 0, 255, 0.142) 0%, rgba(0, 0, 0, 0) 100%),#06092D;
 $simple-and-clean--bg: #ffffff;
 $terminal--bg: #2e2e2e;
+$minimal-dark--bg: #181c2e;
+$minimal-dark-card--bg: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+
 
 //Boxes (darker)
 $creamy-kelp--darker: #557379;
@@ -167,17 +172,43 @@ $selected-gray: #333333;
 
 body {
     // background-color: ;
-    background: $midnight--bg;
-    color: $cypun--text;
+    background-color: #453666;
+    // background: $minimal-dark--bg;
+    color: $cypun-alt--text;
     font-family: 'Noto Sans', sans-serif;
 }
 
+.card-colorful {
+    padding: 2rem;
+    color: white;
+    background: linear-gradient(90deg, rgba(97,63,251,1) 0%, rgba(216,70,252,1) 100%);;
+    border-radius: 15px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 6px 3px 15px rgb(0, 0, 0);
+}
+
+.card {
+    padding: 2rem;
+    // border: 1px red solid;
+    // background-color: #381e1e;
+    background-color: #392C53;
+    // background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    border-radius: 15px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0px 3px 15px rgb(0, 0, 0);
+}
+
 textarea {
-    background-color: #06092D;
-    color:rgb(24, 204, 195);
+    border: 1px red solid;
+    background-color: #2d2242;
     font-family: 'Noto Sans', sans-serif;
+    font-size: large;
     border-radius: 15px;
     margin-top: 0.5rem;
+    color: $cypun-alt--text;
+    padding: 10px;
 }
 
 
@@ -187,8 +218,10 @@ li {
 
 h2 {
     text-decoration: underline;
-    margin-top: 7rem;
+    // margin-top: 7rem;
 }
+
+
 
 .cypun-alt--text {
     color: $cypun-alt--text
@@ -234,6 +267,7 @@ img {
     flex-direction: column;
     justify-content: start;
     margin-left: 2rem;
+    align-items: start;
 }
 
 .layout-column-middle {
@@ -247,7 +281,7 @@ img {
     flex-direction: column;
     // justify-content: space-around;
     margin-right: 2rem;
-    align-items: center;
+    align-items: end;
 }
 
 
@@ -328,13 +362,14 @@ img {
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 15px;
     
-    color: rgb(24, 204, 195);
+    color: $cypun-alt--text;
     overflow: hidden;
     max-height: 7rem;
 }
 
 .themetray-item {
-    border-right: 1px solid white;
+    border-right: 1px solid;
+    border-color: $cypun-alt--text;
     // height:100%;
     padding: 0px 15px 0px 15px;
     display: flex;
@@ -465,12 +500,21 @@ iframe {
     align-items: center;
 }
 
+.small-margin-top {
+    margin-top: 1rem;
+}
+
 .flex {
     display: flex;
 }
 
 .flex-column {
     flex-direction: column;
+}
+
+button {
+    padding: 3px;
+    margin: 1px 3px 1px 3px;
 }
 
 .center-text {
@@ -489,9 +533,9 @@ iframe {
 
 .notepad {
     margin-top: 2rem;
-    height: 32rem;
-    color: yellow;
-    max-width: 18rem;
+    // height: 32rem;
+    color: $cypun-alt--text;
+    // max-width: 18rem;
     
     
 }
@@ -564,10 +608,10 @@ iframe {
   padding: 10px;
   outline: none;
   border-radius: 5px;
-  border: 2px solid $midnight--text;
+  border: 2px solid $cypun-alt--text;
   transition: all .5s ease-in-out;
-  background-color: #190d4e;
-  color: $midnight--text;
+  background-color: #4e0d0d;
+  color: $cypun-alt--text;
 }
 
 .app-form-container .error{
@@ -576,12 +620,12 @@ iframe {
 }
 
 .app-form-container form input:focus{
-  background-color: #1e115a;
+  background-color: #5a1111;
 }
 
 .app-form-container .btn{
   padding: 10px;
-  background-color: #32ceda;
+  background-color: $cypun-alt--text;
   border: none;
   margin: 10px 0;
   width: 100%;
@@ -598,8 +642,8 @@ iframe {
 
 .data-card{
   padding: 20px;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-  border-radius: 5px;
+//   box-shadow: 0px 3px 15px rgb(0, 0, 0);
+  border-radius: 15px;
   flex-basis: 50%;
 }
 
@@ -613,7 +657,7 @@ iframe {
 
 .todo-container{
   margin: 10px 0;
-  height: 25vh;
+//   height: 25vh;
 //   overflow: scroll;
   padding: 20px;
 }
@@ -625,7 +669,7 @@ iframe {
   padding: 10px;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
   border-radius: 5px;
-  background-color: #00e7ff1a;
+  background-color: #ff00001a;
 //   margin: 20px 0;
 }
 

@@ -19,6 +19,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
+import CurrentCloudCover from "../components/CurrentCloudCover"
 
 
 // -------------- BEGIN TELEGRAM API STUFF ----------------
@@ -137,6 +138,7 @@ const IndexPage = () => {
       
       <div className="level-one--top">
         <ThemeTray />
+        <CurrentCloudCover />
         <CloudCoverTray />
       </div>
       
@@ -149,9 +151,9 @@ const IndexPage = () => {
 
         <div className="layout-column-middle">
           <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} telegramNotifications={telegramNotifications} messengerNotifications={messengerNotifications} gmailNotifications={gmailNotifications} />
-          <Accordion style={{ width: 650, backgroundColor: "#32ceda" }}>
+          <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
-              <Typography style={{ fontWeight: 10, }}>Google Calendar</Typography>
+              <Typography style={{ fontWeight: 10, color: "#ffffff" }}>Google Calendar</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>

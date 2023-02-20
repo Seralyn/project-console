@@ -37,7 +37,7 @@ export default function CurrentWeather(props) {
     
 
     return ( 
-        <div className="component-border side-component">
+        <div className="component-border side-component card">
             
             <div className="weather-box">
                 <h2 className="center-text underline-text cypun-alt--text">Current Weather</h2>

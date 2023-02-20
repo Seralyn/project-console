@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CheckIns({lithuanianDateData}) {
     return ( 
-        <div className="component-border side-component">
+        <div className="component-border side-component card">
             <h2 className="center-text underline-text cypun-alt--text">CheckIns</h2>
             <h3>Today's date: <span className="bold-text">{lithuanianDateData}</span></h3>
             <div>Rumi: 10th & 25th</div>

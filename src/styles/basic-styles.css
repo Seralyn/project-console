@@ -97,17 +97,39 @@
 }
 
 body {
-  background: radial-gradient(50% 158.02% at 50% 50%, rgba(20, 0, 255, 0.142) 0%, rgba(0, 0, 0, 0) 100%), #06092D;
-  color: #00e1f1;
+  background-color: #453666;
+  color: #ff4b4b;
   font-family: "Noto Sans", sans-serif;
 }
 
+.card-colorful {
+  padding: 2rem;
+  color: white;
+  background: linear-gradient(90deg, rgb(97, 63, 251) 0%, rgb(216, 70, 252) 100%);
+  border-radius: 15px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 6px 3px 15px rgb(0, 0, 0);
+}
+
+.card {
+  padding: 2rem;
+  background-color: #392C53;
+  border-radius: 15px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0px 3px 15px rgb(0, 0, 0);
+}
+
 textarea {
-  background-color: #06092D;
-  color: rgb(24, 204, 195);
+  border: 1px red solid;
+  background-color: #2d2242;
   font-family: "Noto Sans", sans-serif;
+  font-size: large;
   border-radius: 15px;
   margin-top: 0.5rem;
+  color: #ff4b4b;
+  padding: 10px;
 }
 
 li {
@@ -116,7 +138,6 @@ li {
 
 h2 {
   text-decoration: underline;
-  margin-top: 7rem;
 }
 
 .cypun-alt--text {
@@ -161,6 +182,7 @@ img {
   flex-direction: column;
   justify-content: start;
   margin-left: 2rem;
+  align-items: start;
 }
 
 .layout-column-middle {
@@ -173,7 +195,7 @@ img {
   display: flex;
   flex-direction: column;
   margin-right: 2rem;
-  align-items: center;
+  align-items: end;
 }
 
 .col {
@@ -239,13 +261,14 @@ img {
   min-width: 32rem;
   margin: 2rem 1rem 2rem 1rem;
   border-radius: 15px;
-  color: rgb(24, 204, 195);
+  color: #ff4b4b;
   overflow: hidden;
   max-height: 7rem;
 }
 
 .themetray-item {
-  border-right: 1px solid white;
+  border-right: 1px solid;
+  border-color: #ff4b4b;
   padding: 0px 15px 0px 15px;
   display: flex;
   flex-direction: column;
@@ -352,12 +375,21 @@ iframe {
   align-items: center;
 }
 
+.small-margin-top {
+  margin-top: 1rem;
+}
+
 .flex {
   display: flex;
 }
 
 .flex-column {
   flex-direction: column;
+}
+
+button {
+  padding: 3px;
+  margin: 1px 3px 1px 3px;
 }
 
 .center-text {
@@ -375,9 +407,7 @@ iframe {
 
 .notepad {
   margin-top: 2rem;
-  height: 32rem;
-  color: yellow;
-  max-width: 18rem;
+  color: #ff4b4b;
 }
 
 .divider-bar {
@@ -435,10 +465,10 @@ iframe {
   padding: 10px;
   outline: none;
   border-radius: 5px;
-  border: 2px solid #32ceda;
+  border: 2px solid #ff4b4b;
   transition: all 0.5s ease-in-out;
-  background-color: #190d4e;
-  color: #32ceda;
+  background-color: #4e0d0d;
+  color: #ff4b4b;
 }
 
 .app-form-container .error {
@@ -447,12 +477,12 @@ iframe {
 }
 
 .app-form-container form input:focus {
-  background-color: #1e115a;
+  background-color: #5a1111;
 }
 
 .app-form-container .btn {
   padding: 10px;
-  background-color: #32ceda;
+  background-color: #ff4b4b;
   border: none;
   margin: 10px 0;
   width: 100%;
@@ -469,8 +499,7 @@ iframe {
 
 .data-card {
   padding: 20px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 15px;
   flex-basis: 50%;
 }
 
@@ -484,7 +513,6 @@ iframe {
 
 .todo-container {
   margin: 10px 0;
-  height: 25vh;
   padding: 20px;
 }
 
@@ -495,7 +523,7 @@ iframe {
   padding: 10px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  background-color: rgba(0, 231, 255, 0.1019607843);
+  background-color: rgba(255, 0, 0, 0.1019607843);
 }
 
 .todo-card .icon-done {

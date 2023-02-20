@@ -7,7 +7,7 @@ export default function GreetingBox({seralynActivity, dayEpoch, telegramNotifica
     
     
     return ( 
-        <div className="center-text">
+        <div className="center-text card-colorful">
             <GreetingHeader dayEpoch= {dayEpoch} />
             <WhatDoing seralynActivity = {seralynActivity}/>
             <SocialNotificationsTray telegramNotifications={telegramNotifications} messengerNotifications={messengerNotifications} gmailNotifications={gmailNotifications} />

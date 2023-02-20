@@ -48,6 +48,8 @@ export default function CloudCoverTray() {
     //   function errors(err) {
     //     console.warn(`ERROR(${err.code}): ${err.message}`);
     //   }
+
+    //   success();
     
 
     // const [currentWeatherData, setcurrentWeatherData] = useState("");
@@ -74,7 +76,7 @@ export default function CloudCoverTray() {
     const getThatForecastForMe = () => {
         axios.get(baseURLForecast).then((resp) => {
             setForecastWeatherData(resp.data);
-            console.log(resp.data);
+            // console.log(resp.data);
     });
     }
 

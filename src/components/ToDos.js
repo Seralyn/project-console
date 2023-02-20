@@ -73,7 +73,7 @@ export default function ToDos() {
 	// let month = new Date().toLocaleDateString('en-us', { month: 'short' });
 
 	return (
-		<div className="app-container">
+		<div className="app-container card">
 			<div className="header-section">
             <h2 className="center-text underline-text cypun-alt--text">Todo</h2>
 				<div className="app-form-container">

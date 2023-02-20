@@ -32,7 +32,7 @@ export default function Upcoming() {
       }
     
     return ( 
-        <div className="component-border side-component">
+        <div className="component-border side-component card">
             <h2 className="cypun-alt--text">Upcoming </h2>
             <div>{showEvents}</div>
             <ul>

@@ -9,7 +9,7 @@ export default function ClockTray({coloradoTimeData, lithuaniaTimeData, japanTim
            
 
     return ( 
-        <div className="clocktray-layout">
+        <div className="card">
             <ColoradoClock coloradoTimeData= {coloradoTimeData} />
             <LithuaniaClock lithuaniaTimeData = {lithuaniaTimeData} />
             <TokyoClock japanTimeData = {japanTimeData} />
