@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 
 export default function Notepad() {
       
+      const isBrowser = typeof window !== "undefined";
+      if (!isBrowser) return;
       const [notepadInput, setNotepadInput] = useState(localStorage.getItem("notepadInput"));
 
       useEffect(() => {

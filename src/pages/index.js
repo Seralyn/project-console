@@ -58,6 +58,7 @@ import CurrentCloudCover from "../components/CurrentCloudCover"
 
 const IndexPage = () => {
 
+  
   // --------CLOCK LOGIC START-----------
   const timeFORMAT = 'HH:mm';
   const dateFORMAT = 'ddd MMM, Do z';
