@@ -53,6 +53,12 @@ $terminal--border: #201e1e;
 $neutral-grey: #464646;
 $selected-gray: #333333;
 
+// Paul Palette
+$paul--bg: linear-gradient(90deg, rgba(142,151,255,1) 0%, rgba(254,148,246,1) 50%, rgba(142,151,255,1) 100%);;
+$paul--primary: rgb(126, 136, 241);
+$paul--secondary: rgb(238, 121, 228);
+$paul--text: #2c0e4e;
+
 // ------------START THEMETRAY COLOR ID DEFS------------
 #CK-bg {
     background-color: $creamy-kelp--bg;
@@ -172,16 +178,16 @@ $selected-gray: #333333;
 
 body {
     // background-color: ;
-    background-color: #453666;
+    background: $paul--bg;
     // background: $minimal-dark--bg;
-    color: $cypun-alt--text;
+    color: $paul--text;
     font-family: 'Noto Sans', sans-serif;
 }
 
 .card-colorful {
     padding: 2rem;
     color: #ff4b4b;
-    background: linear-gradient(90deg, rgb(64, 52, 116) 0%, rgb(116, 61, 129) 100%);
+    background: $paul--primary;
     border-radius: 15px;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -192,7 +198,7 @@ body {
     padding: 2rem;
     // border: 1px red solid;
     // background-color: #381e1e;
-    background-color: #392C53;
+    background-color: $paul--primary;
     // background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     border-radius: 15px;
     margin-top: 3rem;
@@ -200,14 +206,25 @@ body {
     box-shadow: 0px 3px 15px rgb(0, 0, 0);
 }
 
+.cards {
+    // max-width: 1700px;
+    margin: 0 auto;
+    // display: grid;
+    gap: 3rem;
+    // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 textarea {
     border: 1px red solid;
-    background-color: #2d2242;
+    background-color: rgb(95, 104, 199);
     font-family: 'Noto Sans', sans-serif;
     font-size: large;
     border-radius: 15px;
     margin-top: 0.5rem;
-    color: $cypun-alt--text;
+    color: $paul--text;
     padding: 10px;
 }
 
@@ -249,11 +266,20 @@ img {
 .page-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
+
+// .page-container {
+//     max-width: 1200px;
+//     margin: 0 auto;
+//     display: grid;
+//     gap: 1rem;
+//     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//   }
 
 .level-one--top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
 }
 
@@ -362,14 +388,14 @@ img {
     margin: 2rem 1rem 2rem 1rem;
     border-radius: 15px;
     
-    color: $cypun-alt--text;
+    color: $paul--text;
     overflow: hidden;
     max-height: 7rem;
 }
 
 .themetray-item {
     border-right: 1px solid;
-    border-color: $cypun-alt--text;
+    border-color: $paul--primary;
     // height:100%;
     padding: 0px 15px 0px 15px;
     display: flex;
@@ -390,7 +416,8 @@ img {
 }
 
 .themetray-selected {
-    border-right: 1px solid white;
+    border-right: 1px solid;
+    border-color: $paul--primary;
     // height:100%;
     padding: 0px 15px 0px 15px;
     display: flex;

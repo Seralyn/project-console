@@ -97,15 +97,15 @@
 }
 
 body {
-  background-color: #453666;
-  color: #ff4b4b;
+  background: linear-gradient(90deg, rgb(142, 151, 255) 0%, rgb(254, 148, 246) 50%, rgb(142, 151, 255) 100%);
+  color: #2c0e4e;
   font-family: "Noto Sans", sans-serif;
 }
 
 .card-colorful {
   padding: 2rem;
   color: #ff4b4b;
-  background: linear-gradient(90deg, rgb(64, 52, 116) 0%, rgb(116, 61, 129) 100%);
+  background: rgb(126, 136, 241);
   border-radius: 15px;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -114,21 +114,29 @@ body {
 
 .card {
   padding: 2rem;
-  background-color: #392C53;
+  background-color: rgb(126, 136, 241);
   border-radius: 15px;
   margin-top: 3rem;
   margin-bottom: 3rem;
   box-shadow: 0px 3px 15px rgb(0, 0, 0);
 }
 
+.cards {
+  margin: 0 auto;
+  gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 textarea {
   border: 1px red solid;
-  background-color: #2d2242;
+  background-color: rgb(95, 104, 199);
   font-family: "Noto Sans", sans-serif;
   font-size: large;
   border-radius: 15px;
   margin-top: 0.5rem;
-  color: #ff4b4b;
+  color: #2c0e4e;
   padding: 10px;
 }
 
@@ -164,11 +172,12 @@ img {
 .page-container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .level-one--top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
 }
 
@@ -261,14 +270,14 @@ img {
   min-width: 32rem;
   margin: 2rem 1rem 2rem 1rem;
   border-radius: 15px;
-  color: #ff4b4b;
+  color: #2c0e4e;
   overflow: hidden;
   max-height: 7rem;
 }
 
 .themetray-item {
   border-right: 1px solid;
-  border-color: #ff4b4b;
+  border-color: rgb(126, 136, 241);
   padding: 0px 15px 0px 15px;
   display: flex;
   flex-direction: column;
@@ -287,7 +296,8 @@ img {
 }
 
 .themetray-selected {
-  border-right: 1px solid white;
+  border-right: 1px solid;
+  border-color: rgb(126, 136, 241);
   padding: 0px 15px 0px 15px;
   display: flex;
   flex-direction: column;

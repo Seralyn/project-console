@@ -55,7 +55,6 @@ import CurrentCloudCover from "../components/CurrentCloudCover"
 
 
 
-
 const IndexPage = () => {
 
   
@@ -138,38 +137,26 @@ const IndexPage = () => {
     <main className="page-container">
       
       <div className="level-one--top">
-        <ThemeTray />
-        <CurrentCloudCover />
         <CloudCoverTray />
       </div>
-      
-      <div className="level-one--bottom">
-        <div className="layout-column-left">
-          <ClockTray coloradoTimeData = {coloradoTime} lithuaniaTimeData = {lithuaniaTime} japanTimeData = {japanTime} />
-          <Upcoming />
-          <Notepad />
-        </div>
 
-        <div className="layout-column-middle">
-          <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} telegramNotifications={telegramNotifications} messengerNotifications={messengerNotifications} gmailNotifications={gmailNotifications} />
-          <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
-              <Typography style={{ fontWeight: 10, color: "#ff4b4b" }}>Google Calendar</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                <GoogleCalendar />
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          
-        </div>
-
-        <div className="layout-column-right">
-          <CurrentWeather />
-          <CheckIns lithuanianDateData={lithuaniaDate} />
-          <ToDos />
-        </div>
+      <div className="cards">
+        <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} telegramNotifications={telegramNotifications} messengerNotifications={messengerNotifications} gmailNotifications={gmailNotifications} />
+        <Upcoming />
+        <Notepad />
+        <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
+            <Typography style={{ fontWeight: 10, color: "#ff4b4b" }}>Google Calendar</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              <GoogleCalendar />
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <CurrentWeather />
+        <CheckIns lithuanianDateData={lithuaniaDate} />
+        <ToDos />
       </div>
       
     </main>
