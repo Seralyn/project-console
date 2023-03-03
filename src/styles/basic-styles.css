@@ -97,15 +97,15 @@
 }
 
 body {
-  background: linear-gradient(90deg, rgb(142, 151, 255) 0%, rgb(254, 148, 246) 50%, rgb(142, 151, 255) 100%);
-  color: #2c0e4e;
+  background: #2D142C;
+  color: #EE4540;
   font-family: "Noto Sans", sans-serif;
 }
 
 .card-colorful {
   padding: 2rem;
   color: #ff4b4b;
-  background: rgb(126, 136, 241);
+  background: #510A32;
   border-radius: 15px;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -114,7 +114,7 @@ body {
 
 .card {
   padding: 2rem;
-  background-color: rgb(126, 136, 241);
+  background-color: #510A32;
   border-radius: 15px;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -131,12 +131,12 @@ body {
 
 textarea {
   border: 1px red solid;
-  background-color: rgb(95, 104, 199);
+  background-color: #801336;
   font-family: "Noto Sans", sans-serif;
   font-size: large;
   border-radius: 15px;
   margin-top: 0.5rem;
-  color: #2c0e4e;
+  color: #EE4540;
   padding: 10px;
 }
 
@@ -270,14 +270,14 @@ img {
   min-width: 32rem;
   margin: 2rem 1rem 2rem 1rem;
   border-radius: 15px;
-  color: #2c0e4e;
+  color: #EE4540;
   overflow: hidden;
   max-height: 7rem;
 }
 
 .themetray-item {
   border-right: 1px solid;
-  border-color: rgb(126, 136, 241);
+  border-color: #C72C41;
   padding: 0px 15px 0px 15px;
   display: flex;
   flex-direction: column;
@@ -297,7 +297,7 @@ img {
 
 .themetray-selected {
   border-right: 1px solid;
-  border-color: rgb(126, 136, 241);
+  border-color: #C72C41;
   padding: 0px 15px 0px 15px;
   display: flex;
   flex-direction: column;

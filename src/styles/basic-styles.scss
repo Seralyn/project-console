@@ -54,10 +54,11 @@ $neutral-grey: #464646;
 $selected-gray: #333333;
 
 // Paul Palette
-$paul--bg: linear-gradient(90deg, rgba(142,151,255,1) 0%, rgba(254,148,246,1) 50%, rgba(142,151,255,1) 100%);;
-$paul--primary: rgb(126, 136, 241);
-$paul--secondary: rgb(238, 121, 228);
-$paul--text: #2c0e4e;
+$paul--bg: #2D142C;
+$paul--primary: #C72C41;
+$paul--secondary: #801336;
+$paul--tertiary: #510A32;
+$paul--text: #EE4540;
 
 // ------------START THEMETRAY COLOR ID DEFS------------
 #CK-bg {
@@ -187,7 +188,7 @@ body {
 .card-colorful {
     padding: 2rem;
     color: #ff4b4b;
-    background: $paul--primary;
+    background: $paul--tertiary;
     border-radius: 15px;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -198,7 +199,7 @@ body {
     padding: 2rem;
     // border: 1px red solid;
     // background-color: #381e1e;
-    background-color: $paul--primary;
+    background-color: $paul--tertiary;
     // background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     border-radius: 15px;
     margin-top: 3rem;
@@ -219,7 +220,7 @@ body {
 
 textarea {
     border: 1px red solid;
-    background-color: rgb(95, 104, 199);
+    background-color: $paul--secondary;
     font-family: 'Noto Sans', sans-serif;
     font-size: large;
     border-radius: 15px;
