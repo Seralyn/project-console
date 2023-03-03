@@ -21,14 +21,6 @@ export default function Notepad() {
         }
       });
 
-      // -----------------------------
-
-      // const saveText = (e) => {
-      //   e.preventDefault();
-      //   console.log("Save was clicked, notepad value is: " +notepadInput);
-      //   localStorage.setItem("notepadInput", notepadInput);
-      // }
-
       const insertNotepadInput = () => {
         return notepadInput;
       }

@@ -144,6 +144,11 @@ li {
   margin-bottom: 10px;
 }
 
+a {
+  color: #EE4540;
+  text-align: center;
+}
+
 h2 {
   text-decoration: underline;
 }

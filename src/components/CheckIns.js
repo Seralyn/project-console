@@ -4,13 +4,14 @@ import React from "react";
 export default function CheckIns({lithuanianDateData}) {
     return ( 
         <div className="component-border side-component card">
-            <h2 className="center-text underline-text cypun-alt--text">CheckIns</h2>
+            <h2 className="center-text underline-text cypun-alt--text">Mistress Management</h2>
             <h3>Today's date: <span className="bold-text">{lithuanianDateData}</span></h3>
-            <div>Rumi: 10th & 25th</div>
-            <div>Ivan: 7th, 14th, 23rd</div>
-            <div>Zack: 3rd, 12th, 20th, 28th</div>
-            <div>Daniel: 14th</div>
-            <div>Katy: 9th, 18th, 27th</div>
+            <div>Seralyn: recent interaction - likely</div>
+            <div>Erika: Tease her over text and make plan to slice her</div>
+            <div>Paulina: Set up a meeting to "talk" but actually just fuck her</div>
+            <div>Remonda: Protect her</div>
+            <div>The New Girl: Figure out what you can get away with</div>
+            <a href="https://fetlife.com" target="_blank">Open Fetlife</a>
         </div>
      );
 }

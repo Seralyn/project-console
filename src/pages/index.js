@@ -95,13 +95,13 @@ const IndexPage = () => {
   
   const findSeralynCurrentActivity = () => {
       
-      if (ltNum > 9.31 && ltNum <= 10.15) { return "Drinking coffee and scrolling" }
-      if (ltNum >= 10.16 && ltNum <= 13) { return "Coding your heart out" }
+      if (ltNum > 9.31 && ltNum <= 10.15) { return "Pretending to be working" }
+      if (ltNum >= 10.16 && ltNum <= 13) { return "Hopefully actually working" }
       if (ltNum >= 13.01 && ltNum <= 14) { return "Taking your lunch break" }
-      if (ltNum >= 14.01 && ltNum <= 18) { return "Coding and chatting on Telegram" }
-      if (ltNum >= 18.01 && ltNum <= 20.30) { return "Fucking around doing nothing in particular" }
+      if (ltNum >= 14.01 && ltNum <= 18) { return "Prepping for workshop" }
+      if (ltNum >= 18.01 && ltNum <= 20.30) { return "Leading your workshop or picking kids up from school" }
       if (ltNum >= 20.31 && ltNum <= 21.30) { return "Cooking or eating dinner" }
-      if (ltNum >= 21.31 && ltNum <= 23.59) { return "Getting high and playing video games" }
+      if (ltNum >= 21.31 && ltNum <= 23.59) { return "Getting ready for bed" }
       if (ltNum >= 24.00 && ltNum <= 9.30) { return "Not sleeping, when you should be sleeping" }
       
   }
@@ -154,7 +154,7 @@ const IndexPage = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <CurrentWeather />
+        {/* <CurrentWeather /> */}
         <CheckIns lithuanianDateData={lithuaniaDate} />
         <ToDos />
       </div>
