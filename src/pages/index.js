@@ -1,15 +1,12 @@
 import * as React from "react"
 import '../styles/basic-styles.css'; 
-// import HeaderBar from '../components/HeaderBar'
 import ThemeTray from '../components/ThemeTray'
 import CloudCoverTray from '../components/CloudCoverTray'
 import ClockTray from '../components/ClockTray'
 import Upcoming from '../components/Upcoming'
 import GreetingBox from "../components/GreetingBox";
-// import Notepad from "../components/Notepad";
 import ToDos from "../components/ToDos";
 import GoogleCalendar from "../components/GoogleCalendar";
-import SocialNotificationsTray from "../components/SocialNotificationsTray";
 import CheckIns from "../components/CheckIns"
 import { useState, useEffect } from 'react'
 import { formatToTimeZone } from 'date-fns-timezone';
@@ -21,7 +18,7 @@ import Typography from "@material-ui/core/Typography";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Q1 from "../components/Q1";
 import Q2 from "../components/Q2";
-
+import Q3 from "../components/Q3";
 
 // -------------- BEGIN TELEGRAM API STUFF ----------------
 
@@ -61,19 +58,13 @@ const IndexPage = () => {
   
   // --------CLOCK LOGIC START-----------
   const timeFORMAT = 'HH:mm';
-  const dateFORMAT = 'ddd MMM, Do z';
+  const dateFORMAT = 'ddd MMM, Do';
   const checkSchedFORMAT = 'HH.mm';
   const TIME_ZONE_TOKYO = 'Asia/Tokyo';
   const TIME_ZONE_LITHUANIA = 'Europe/Helsinki'
   const TIME_ZONE_DENVER = 'America/Denver';
 
   const now= new Date();
-
-  let japanTime = formatToTimeZone(now, timeFORMAT, {timeZone: TIME_ZONE_TOKYO});
-  // let japanDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_TOKYO});
-  
-  let coloradoTime = formatToTimeZone(now, timeFORMAT, {timeZone: TIME_ZONE_DENVER});
-  // let coloradoDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_DENVER});
   
   let lithuaniaTime = formatToTimeZone(now, timeFORMAT, {timeZone: TIME_ZONE_LITHUANIA});
   let lithuaniaDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_LITHUANIA});
@@ -123,15 +114,7 @@ const IndexPage = () => {
 
   // --------ACTIVITY LOGIC END-----------
 
-  // --------SOCIAL NOTIFICATION BADGE LOGIC START-----------
-
-  let telegramNotifications = 2;
-  let messengerNotifications = 6;
-  let gmailNotifications = 4;
-  
-    
-    
-
+ 
   // --------SOCIAL NOTIFICATION BADGE LOGIC END-----------
 
   return (
@@ -140,15 +123,14 @@ const IndexPage = () => {
       <div className="level-one--top">
         <CloudCoverTray />
       </div>
+      <div className="level-one--top">{lithuaniaDate}</div>
+      <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult}  />
 
       <div className="cards">
-        <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} telegramNotifications={telegramNotifications} messengerNotifications={messengerNotifications} gmailNotifications={gmailNotifications} />
         <Q1 />
          <Q2 />
-        {/* <Q3 />  */}
+        <Q3 /> 
         <Upcoming />
-        <h2>poop</h2>
-        {/* <Notepad /> */}
         <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
             <Typography style={{ fontWeight: 10, color: "#ff4b4b" }}>Google Calendar</Typography>
@@ -159,7 +141,7 @@ const IndexPage = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        {/* <CurrentWeather /> */}
+        
         <CheckIns lithuanianDateData={lithuaniaDate} />
         <ToDos />
       </div>
