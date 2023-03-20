@@ -1,25 +1,26 @@
 import React from "react";
-import Button from "./Button";
 import { useState, useEffect } from "react";
 
 
 export default function Notepad() {
-      
+    const [notepadInput, setNotepadInput] = useState(localStorage.getItem("notepadInput"));
+    useEffect(() => {
+      localStorage.setItem('notepadInput', notepadInput);
+    }, [notepadInput]);
+
+
+    useEffect(() => {
+      const notepadInput = localStorage.getItem('notepadInput');
+      if (notepadInput) {
+        setNotepadInput(notepadInput);
+      }
+    });
+
       const isBrowser = typeof window !== "undefined";
       if (!isBrowser) return;
-      const [notepadInput, setNotepadInput] = useState(localStorage.getItem("notepadInput"));
+      
 
-      useEffect(() => {
-        localStorage.setItem('notepadInput', notepadInput);
-      }, [notepadInput]);
-
-
-      useEffect(() => {
-        const notepadInput = localStorage.getItem('notepadInput');
-        if (notepadInput) {
-         setNotepadInput(notepadInput);
-        }
-      });
+      
 
       const insertNotepadInput = () => {
         return notepadInput;

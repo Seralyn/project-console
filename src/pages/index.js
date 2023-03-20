@@ -6,7 +6,7 @@ import CloudCoverTray from '../components/CloudCoverTray'
 import ClockTray from '../components/ClockTray'
 import Upcoming from '../components/Upcoming'
 import GreetingBox from "../components/GreetingBox";
-import Notepad from "../components/Notepad";
+// import Notepad from "../components/Notepad";
 import ToDos from "../components/ToDos";
 import GoogleCalendar from "../components/GoogleCalendar";
 import SocialNotificationsTray from "../components/SocialNotificationsTray";
@@ -19,7 +19,8 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
-import CurrentCloudCover from "../components/CurrentCloudCover"
+import Q1 from "../components/Q1";
+import Q2 from "../components/Q2";
 
 
 // -------------- BEGIN TELEGRAM API STUFF ----------------
@@ -142,8 +143,12 @@ const IndexPage = () => {
 
       <div className="cards">
         <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult} telegramNotifications={telegramNotifications} messengerNotifications={messengerNotifications} gmailNotifications={gmailNotifications} />
+        <Q1 />
+         <Q2 />
+        {/* <Q3 />  */}
         <Upcoming />
-        <Notepad />
+        <h2>poop</h2>
+        {/* <Notepad /> */}
         <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
             <Typography style={{ fontWeight: 10, color: "#ff4b4b" }}>Google Calendar</Typography>
