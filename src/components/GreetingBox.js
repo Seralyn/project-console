@@ -8,7 +8,7 @@ export default function GreetingBox({seralynActivity, dayEpoch}) {
     
     return ( 
         <div className="center-text card-colorful">
-            <GreetingHeader dayEpoch= {dayEpoch} />
+            <GreetingHeader className="yellow-text" dayEpoch= {dayEpoch} />
             <WhatDoing seralynActivity = {seralynActivity}/>
             
         </div>

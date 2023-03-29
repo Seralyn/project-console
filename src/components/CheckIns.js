@@ -4,7 +4,7 @@ import React from "react";
 export default function CheckIns({lithuanianDateData}) {
     return ( 
         <div className="component-border side-component card">
-            <h2 className="center-text underline-text cypun-alt--text">Mistress Management</h2>
+            <h2 className="center-text underline-text yellow-text">Mistress Management</h2>
             <h3>Today's date: <span className="bold-text">{lithuanianDateData}</span></h3>
             <div>Seralyn: recent interaction - likely</div>
             <div>Erika: Tease her over text and make plan to slice her</div>

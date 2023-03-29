@@ -91,8 +91,8 @@ const IndexPage = () => {
       <h3 className="level-one--top">{lithuaniaDate}</h3>
       <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult}  />
       <div className="cards">
-        <ToDos />
         <CheckIns lithuanianDateData={lithuaniaDate} />
+        <ToDos />
       </div>
       {/*<div className="cards">
         <Upcoming /> 

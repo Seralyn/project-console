@@ -75,7 +75,7 @@ export default function ToDos() {
 	return (
 		<div className="app-container card">
 			<div className="header-section">
-            <h2 className="center-text underline-text cypun-alt--text">Todo</h2>
+            <h2 className="center-text underline-text yellow-text">Todo</h2>
 				<div className="app-form-container">
 					<form onSubmit={handleSubmit}>
 						<input

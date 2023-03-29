@@ -13,7 +13,11 @@ $paul--primary: #C72C41;
 $paul--secondary: #470617;
 $paul--tertiary: #2c0815;
 $paul--text: #EE4540;
+$paul--yellow: #d6d83c;
 
+.yellow-text {
+    color: $paul--yellow;
+}
 
 body {
     // background-color: ;
