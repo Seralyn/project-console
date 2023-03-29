@@ -5,27 +5,24 @@ import { useState, useEffect } from "react";
 
 export default function Q1() {
       
-
-
+  const isBrowser = typeof window !== "undefined";
+    if (!isBrowser) return;
     const [q1Input, setQ1Input] = useState(localStorage.getItem("q1Input"));
+
+
     useEffect(() => {
-        localStorage.setItem('q1Input', q1Input);
-      }, [q1Input]);
+      localStorage.setItem('q1Input', q1Input);
+    }, [q1Input]);
+    
+    
+    useEffect(() => {
+      const q1Input = localStorage.getItem('q1Input');
+      if (q1Input) {
+        setQ1Input(q1Input);
+      }
+    });      
 
-
-      useEffect(() => {
-        const q1Input = localStorage.getItem('q1Input');
-        if (q1Input) {
-         setQ1Input(q1Input);
-        }
-      });
-
-      const isBrowser = typeof window !== "undefined";
-      if (!isBrowser) return;
-
-      
-
-      const insertq1Input = () => {
+    const insertq1Input = () => {
         return q1Input;
       }
 

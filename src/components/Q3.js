@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 export default function Q3() {
       
+  const isBrowser = typeof window !== "undefined";
+  if (!isBrowser) return;
     const [q3Input, setQ3Input] = useState(localStorage.getItem("q3Input"));
     
     useEffect(() => {
@@ -18,8 +20,6 @@ export default function Q3() {
       }
     });
 
-      const isBrowser = typeof window !== "undefined";
-      if (!isBrowser) return;
 
       
 

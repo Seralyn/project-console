@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 
 export default function Q2() {
       
+
+    const isBrowser = typeof window !== "undefined";
+    if (!isBrowser) return;
     const [q2Input, setQ2Input] = useState(localStorage.getItem("q2Input"));
     
     useEffect(() => {
@@ -17,9 +20,6 @@ export default function Q2() {
         setQ2Input(q2Input);
       }
     });
-
-      const isBrowser = typeof window !== "undefined";
-      if (!isBrowser) return;
 
       
 
