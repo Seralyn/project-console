@@ -94,8 +94,8 @@ const IndexPage = () => {
         <ToDos />
         <CheckIns lithuanianDateData={lithuaniaDate} />
       </div>
-      <div className="cards">
-        {/* <Upcoming /> */}
+      {/*<div className="cards">
+        <Upcoming /> 
         </div>
         <div className="cards">
         <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
@@ -104,11 +104,11 @@ const IndexPage = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              {/* <GoogleCalendar /> */}
+              <GoogleCalendar /> 
             </Typography>
           </AccordionDetails>
         </Accordion>
-        </div>
+        </div>*/}
       <div className="cards">
         <Q1 />
          <Q2 />
