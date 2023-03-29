@@ -1,17 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-// import { createClient } from '@supabase/supabase-js'
+
 
 
 export default function Q1() {
       
-    // SUPABASE DATABASE STUFF START
 
-    // const supabaseUrl = 'https://bmnoqqeetsevniwwexak.supabase.co'
-    // const supabaseKey = process.env.SUPABASE_KEY
-    // const supabase = createClient(supabaseUrl, supabaseKey)
-
-    // SUPABASE DATABASE STUFF END
 
     const [q1Input, setQ1Input] = useState(localStorage.getItem("q1Input"));
     useEffect(() => {

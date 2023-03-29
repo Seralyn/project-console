@@ -1,8 +1,6 @@
 import * as React from "react"
 import '../styles/basic-styles.css'; 
-import ThemeTray from '../components/ThemeTray'
 import CloudCoverTray from '../components/CloudCoverTray'
-import ClockTray from '../components/ClockTray'
 import Upcoming from '../components/Upcoming'
 import GreetingBox from "../components/GreetingBox";
 import ToDos from "../components/ToDos";
@@ -10,7 +8,6 @@ import GoogleCalendar from "../components/GoogleCalendar";
 import CheckIns from "../components/CheckIns"
 import { useState, useEffect } from 'react'
 import { formatToTimeZone } from 'date-fns-timezone';
-import CurrentWeather from "../components/CurrentWeather";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
@@ -19,46 +16,6 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Q1 from "../components/Q1";
 import Q2 from "../components/Q2";
 import Q3 from "../components/Q3";
-import { createClient } from '@supabase/supabase-js'
-
-// -------------- BEGIN TELEGRAM API STUFF ----------------
-
-// App api_id:
-// 22128585
-
-// app api_hash:
-// b40aa83bbd80178e9bef6b4c3c3929e5
-
-// Test: 149.154.167.40:443
-// -----BEGIN RSA PUBLIC KEY-----
-// MIIBCgKCAQEAyMEdY1aR+sCR3ZSJrtztKTKqigvO/vBfqACJLZtS7QMgCGXJ6XIR
-// yy7mx66W0/sOFa7/1mAZtEoIokDP3ShoqF4fVNb6XeqgQfaUHd8wJpDWHcR2OFwv
-// plUUI1PLTktZ9uW2WE23b+ixNwJjJGwBDJPQEQFBE+vfmH0JP503wr5INS1poWg/
-// j25sIWeYPHYeOrFp/eXaqhISP6G+q2IeTaWTXpwZj4LzXq5YOpk4bYEQ6mvRq7D1
-// aHWfYmlEGepfaYR8Q0YqvvhYtMte3ITnuSJs171+GDqpdKcSwHnd6FudwGO4pcCO
-// j4WcDuXc2CTHgH8gFTNhp/Y8/SpDOhvn9QIDAQAB
-// -----END RSA PUBLIC KEY-----
-
-
-// Production: 149.154.167.50:443
-// -----BEGIN RSA PUBLIC KEY-----
-// MIIBCgKCAQEA6LszBcC1LGzyr992NzE0ieY+BSaOW622Aa9Bd4ZHLl+TuFQ4lo4g
-// 5nKaMBwK/BIb9xUfg0Q29/2mgIR6Zr9krM7HjuIcCzFvDtr+L0GQjae9H0pRB2OO
-// 62cECs5HKhT5DZ98K33vmWiLowc621dQuwKWSQKjWf50XYFw42h21P2KXUGyp2y/
-// +aEyZ+uVgLLQbRA1dEjSDZ2iGRy12Mk5gpYc397aYp438fsJoHIgJ2lgMv5h7WY9
-// t6N/byY9Nw9p21Og3AoXSL2q/2IJ1WRUhebgAdGVMlV1fkuOQoEzR7EdpqtQD9Cs
-// 5+bfo3Nhmcyvk5ftB0WkJ9z6bNZ7yxrP8wIDAQAB
-// -----END RSA PUBLIC KEY-----
-
-// -------------- END TELEGRAM API STUFF ----------------
-
-// SUPABASE DATABASE STUFF START
-
-const supabaseUrl = 'https://bmnoqqeetsevniwwexak.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
-
-// SUPABASE DATABASE STUFF END
 
 
 
@@ -69,13 +26,12 @@ const IndexPage = () => {
   const timeFORMAT = 'HH:mm';
   const dateFORMAT = 'ddd MMM, Do';
   const checkSchedFORMAT = 'HH.mm';
-  const TIME_ZONE_TOKYO = 'Asia/Tokyo';
   const TIME_ZONE_LITHUANIA = 'Europe/Helsinki'
-  const TIME_ZONE_DENVER = 'America/Denver';
+  
 
   const now= new Date();
   
-  let lithuaniaTime = formatToTimeZone(now, timeFORMAT, {timeZone: TIME_ZONE_LITHUANIA});
+  // let lithuaniaTime = formatToTimeZone(now, timeFORMAT, {timeZone: TIME_ZONE_LITHUANIA});
   let lithuaniaDate = formatToTimeZone(now, dateFORMAT, {timeZone: TIME_ZONE_LITHUANIA});
 
 
