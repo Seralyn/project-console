@@ -37,7 +37,7 @@ export default function Q2() {
               name="notepad" 
               value={q2Input} 
               rows="12" 
-              cols="40"
+              cols="20"
               onChange={(e) => setQ2Input(e.target.value)}
               placeholder={(q2Input) ? insertq2Input() : "Type Q2 Goals here..."}>
               

@@ -4,11 +4,11 @@ import ApiCalendar from "react-google-calendar-api";
 export default function Upcoming() {
     
     const API_KEY = "AIzaSyBIbRwR7a7jFbdFs9kIYg2-6MAFGW20ctw";
-    const googleClientID = "22637917346-0i19thlcpermmk0nq90vjl2q11o4bfds.apps.googleusercontent.com";
+    const CLIENT_ID = "22637917346-0i19thlcpermmk0nq90vjl2q11o4bfds.apps.googleusercontent.com";
 
     const config = {
-        "clientId": googleClientID,
-        "key": API_KEY,
+        "clientId": CLIENT_ID,
+        "apiKey": API_KEY,
         "scope": "https://www.googleapis.com/auth/calendar",
         "discoveryDocs": [],
         "clientSecret": "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"
@@ -34,7 +34,7 @@ export default function Upcoming() {
     return ( 
         <div className="component-border side-component card">
             <h2 className="cypun-alt--text">Upcoming </h2>
-            <div>{showEvents()}</div>
+            <div>{showEvents}</div>
             {/* <ul>
                 <li>Munch, Thur 2/16/23 @ 19:00</li>
                 <li>Dentist, Sat 2/18/23 @ 13:00</li>

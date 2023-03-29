@@ -123,14 +123,16 @@ const IndexPage = () => {
       <div className="level-one--top">
         <CloudCoverTray />
       </div>
-      <div className="level-one--top">{lithuaniaDate}</div>
+      <h3 className="level-one--top">{lithuaniaDate}</h3>
       <GreetingBox className="center-text" dayEpoch={dayEpochResult} seralynActivity={fscaResult}  />
-
       <div className="cards">
-        <Q1 />
-         <Q2 />
-        <Q3 /> 
+        <ToDos />
+        <CheckIns lithuanianDateData={lithuaniaDate} />
+      </div>
+      <div className="cards">
         <Upcoming />
+        </div>
+        <div className="cards">
         <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
             <Typography style={{ fontWeight: 10, color: "#ff4b4b" }}>Google Calendar</Typography>
@@ -141,10 +143,15 @@ const IndexPage = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        
-        <CheckIns lithuanianDateData={lithuaniaDate} />
-        <ToDos />
+        </div>
+      <div className="cards">
+        <Q1 />
+         <Q2 />
+        <Q3 /> 
       </div>
+      
+       
+        
       
     </main>
   )
@@ -152,4 +159,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Project Console</title>
+export const Head = () => <title>Paul's App</title>

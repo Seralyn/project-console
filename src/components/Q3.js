@@ -37,7 +37,7 @@ export default function Q3() {
               name="notepad" 
               value={q3Input} 
               rows="12" 
-              cols="40"
+              cols="20"
               onChange={(e) => setQ3Input(e.target.value)}
               placeholder={(q3Input) ? insertq3Input() : "Type Q3 Goals here..."}>
               
