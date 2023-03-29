@@ -29,7 +29,7 @@ body {
 
 .card-colorful {
     padding: 2rem;
-    color: #ff4b4b;
+    
     background: $paul--tertiary;
     border-radius: 15px;
     margin-top: 3rem;
@@ -383,6 +383,10 @@ iframe {
 
 .flex-column {
     flex-direction: column;
+}
+
+h1 {
+    color: $paul--yellow;
 }
 
 button {
