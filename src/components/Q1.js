@@ -1,30 +1,39 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { createClient } from '@supabase/supabase-js'
 
 
 export default function Q1() {
       
-    const [q1Input, setQ1Input] = useState(localStorage.getItem("q1Input"));
-    useEffect(() => {
-        localStorage.setItem('q1Input', q1Input);
-      }, [q1Input]);
+    // SUPABASE DATABASE STUFF START
+
+    const supabaseUrl = 'https://bmnoqqeetsevniwwexak.supabase.co'
+    const supabaseKey = process.env.SUPABASE_KEY
+    const supabase = createClient(supabaseUrl, supabaseKey)
+
+    // SUPABASE DATABASE STUFF END
+
+    // const [q1Input, setQ1Input] = useState(localStorage.getItem("q1Input"));
+    // useEffect(() => {
+    //     localStorage.setItem('q1Input', q1Input);
+    //   }, [q1Input]);
 
 
-      useEffect(() => {
-        const q1Input = localStorage.getItem('q1Input');
-        if (q1Input) {
-         setQ1Input(q1Input);
-        }
-      });
+    //   useEffect(() => {
+    //     const q1Input = localStorage.getItem('q1Input');
+    //     if (q1Input) {
+    //      setQ1Input(q1Input);
+    //     }
+    //   });
 
-      const isBrowser = typeof window !== "undefined";
-      if (!isBrowser) return;
+    //   const isBrowser = typeof window !== "undefined";
+    //   if (!isBrowser) return;
 
       
 
-      const insertq1Input = () => {
-        return q1Input;
-      }
+    //   const insertq1Input = () => {
+    //     return q1Input;
+    //   }
 
 
     return ( 

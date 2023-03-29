@@ -19,6 +19,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Q1 from "../components/Q1";
 import Q2 from "../components/Q2";
 import Q3 from "../components/Q3";
+import { createClient } from '@supabase/supabase-js'
 
 // -------------- BEGIN TELEGRAM API STUFF ----------------
 
@@ -50,6 +51,14 @@ import Q3 from "../components/Q3";
 // -----END RSA PUBLIC KEY-----
 
 // -------------- END TELEGRAM API STUFF ----------------
+
+// SUPABASE DATABASE STUFF START
+
+const supabaseUrl = 'https://bmnoqqeetsevniwwexak.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+// SUPABASE DATABASE STUFF END
 
 
 
