@@ -1,10 +1,10 @@
 import * as React from "react"
 import '../styles/basic-styles.css'; 
 import CloudCoverTray from '../components/CloudCoverTray'
-import Upcoming from '../components/Upcoming'
+// import Upcoming from '../components/Upcoming'
 import GreetingBox from "../components/GreetingBox";
 import ToDos from "../components/ToDos";
-import GoogleCalendar from "../components/GoogleCalendar";
+// import GoogleCalendar from "../components/GoogleCalendar";
 import CheckIns from "../components/CheckIns"
 import { useState, useEffect } from 'react'
 import { formatToTimeZone } from 'date-fns-timezone';
@@ -95,7 +95,7 @@ const IndexPage = () => {
         <CheckIns lithuanianDateData={lithuaniaDate} />
       </div>
       <div className="cards">
-        <Upcoming />
+        {/* <Upcoming /> */}
         </div>
         <div className="cards">
         <Accordion style={{ width: 650, backgroundColor: "#392C53" }}>
@@ -104,7 +104,7 @@ const IndexPage = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              <GoogleCalendar />
+              {/* <GoogleCalendar /> */}
             </Typography>
           </AccordionDetails>
         </Accordion>
